@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /administrator/
+Disallow: /crontab/
+Disallow: /includes/
+Disallow: /captcha.php
+Disallow: /compte_bord.php
+Disallow: /compte_boutique.php
+Disallow: /compte_donnees.php

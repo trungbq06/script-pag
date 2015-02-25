@@ -1,0 +1,819 @@
+/* -----  BASE ------  */
+
+html
+{
+	height: 100%;
+}
+body 
+{
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	height: 100%;
+}
+p 
+{
+    margin: 0;
+}
+img 
+{
+    border: 0;
+}
+li 
+{
+   list-style-type: none;
+}
+ul
+{
+   margin: 0;
+   padding: 0;
+}
+h1
+{
+	margin-bottom: 5px;
+	font-family: Tahoma;
+	font-size : 1em;
+}
+h2
+{
+	float: left;
+	margin: 0 0 0 0;
+	font-family: Tahoma;
+	font-size : 1.1em;
+}
+h3
+{
+	margin: 0 0 0 0;
+	font-family: Tahoma;
+	font-size : 1em;
+}
+
+/* ----- TOP HEADER -----  */
+
+#fond
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: block;
+	z-index: -1;
+}
+#top_header
+{
+	width: 100%;
+	height: 27px;
+	background: url("../images/top_header.png") repeat-x;
+	position: fixed;
+	z-index: 1;
+}
+#menu_top_header
+{
+	clear: both;
+	margin: auto;
+	width: 950px;
+	height: 27px;
+}
+#left_top_header
+{
+	float: left;
+	width: 475px;
+	height: 27px;
+	padding-top: 4px;
+}
+#right_top_header
+{
+	float: left;
+	width: 475px;
+	height: 27px;
+	text-align: right;
+	padding-top: 5px;
+}
+
+/*  -----  FOND SITE -----  */
+
+#fond_site_1
+{
+	margin: auto;
+	width: 1000px;
+	height: 100%;
+	background-color: #ECECEC;
+	padding: 39px 0 0 0;
+}
+#fond_site_2
+{
+	margin: 0;
+	width: 1000px;
+	background-color: #ECECEC;
+}
+
+/*  -----  HAUT SITE -----  */
+
+#haut_site
+{   
+    clear: both;
+	margin: auto;
+	width: 950px;
+	height: 90px;
+}
+#haut_site_logo
+{   
+    float: left;
+    width: 222px;
+	height: 90px;
+}
+#haut_site_pub
+{   
+	float: left;
+    width: 728px;
+	height: 90px;
+}
+
+/*  -----  BARRE  LIENS -----  */
+
+#barre_liens_fond
+{   
+	clear: both;
+	margin: auto;
+    width: 950px;
+	height: 45px;
+	margin-top: 15px;
+}
+#barre_liens
+{   
+	float: left;
+    width: 720px;
+	height: 45px;
+	background: url("../images/barre_liens.png") no-repeat;
+}
+#barre_liens_depot
+{   
+	float: left;
+    width: 224px;
+	height: 45px;
+	margin-left: 6px;
+}
+
+/*  -----  ANNONCES PREMIUM -----  */
+
+#menu_an_premium
+{
+	clear: both;
+	margin: auto;
+    width: 950px;
+	height: 179px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.fond_ann_premium
+{
+	float: left;
+    width: 183px;
+	height: 179px;
+	background: url("../images/fond_ann_une.png") no-repeat;
+	margin-right: 7px;
+	text-align: center;
+}
+
+/*  -----  BARRE INFO -----  */
+
+#barre_info
+{   
+	clear: both;
+	margin: auto;
+    width: 950px;
+	height: 25px;
+	margin-top: 13px;
+}
+.bt_info_left
+{
+	float: left;
+	width: 15px;
+	height: 20px;
+	background: url("../images/bt_info_left.png") no-repeat;
+}
+.bt_info_center
+{
+	float: left;
+	height: 20px;
+	background: url("../images/bt_info_center.png") repeat-x;
+}
+.bt_info_right
+{
+	float: left;
+	width: 21px;
+	height: 20px;
+	background: url("../images/bt_info_right.png") no-repeat;
+}
+.bt_info_right2
+{
+	float: left;
+	width: 36px;
+	height: 20px;
+	background: url("../images/bt_info_right2.png") no-repeat;
+}
+.bt_info_center_v
+{
+	float: left;
+	height: 20px;
+	background: url("../images/bt_info_center_v.png") repeat-x;
+}
+.bt_info_right_v
+{
+	float: left;
+	width: 21px;
+	height: 20px;
+	background: url("../images/bt_info_right_v.png") no-repeat;
+}
+.bt_info_right_v2
+{
+	float: left;
+	width: 36px;
+	height: 20px;
+	background: url("../images/bt_info_right_v2.png") no-repeat;
+}
+.bloc_reseaux
+{
+	float: left;
+	margin-left: 10px;
+	padding-top: 1px;
+}
+#bloc_info_right
+{   
+   float: right;
+}
+#bloc_info_right p
+{   
+   float: left;
+}
+#corps_info_ann
+{   
+	clear: both;
+	margin: auto;
+    width: 950px;
+	padding-top: 10px;
+}
+
+/*  -----  CADRE DU CENTRE -----  */
+
+#bloc_center
+{
+	clear: both;
+	margin: auto;
+	width: 950px;
+}
+#middle_bloc_center
+{
+	float: left;
+	width: 948px;
+	border: 1px solid #E3E3E3;
+	background-color: #FFFFFF;
+	margin: 10px 0 0 0;
+}
+
+/*  -----  CARTE -----  */
+
+#carte
+{   
+	float: left;
+    width: 621px;
+	height: 680px;
+	background: transparent url('../images/map/carte.png') no-repeat;
+	background-size: 100%;
+	margin: 20px 47px 10px 52px;
+}
+
+/*  -----  LIENS CATEGORIES -----  */
+
+#bloc_categories_1
+{
+	clear: both;
+	margin: auto;
+	width: 950px;
+}
+#bloc_categories_2
+{
+	float: left;
+	width: 950px;
+	margin-top: 5px;
+}
+
+/*  -----  FOOTER -----  */
+
+#bloc_footer_1
+{   
+	clear: both;
+	margin: auto;
+    width: 100%;
+	height: 57px;
+}
+#bloc_footer_2
+{   
+	float: left;
+    width: 100%;
+	height: 37px;
+	background-color: #1F1F1F;
+	margin-top: 20px;
+}
+#left_footer
+{   
+	float: left;
+	width: 475px;
+	margin-left: 25px;
+}
+#right_footer
+{   
+	float: right;
+	width: 475px;
+	margin-right: 25px;
+	text-align: right;
+}
+
+/*  -----  LISTING ANNONCES -----  */
+
+#corps_listing
+{   
+	clear: both;
+	float: left;
+	width: 705px;
+	margin: 10px 0 0 15px;
+}
+#bloc_pagination
+{
+	float: left;
+	width: 705px;
+	padding: 5px 0 15px 0;
+}
+.fond_ann_listing_1
+{   
+	clear: both;
+    width: 705px;
+	height: 125px;
+	background: url("../images/fond_listing1.png") no-repeat;
+	margin-bottom: 10px;
+}
+.fond_ann_listing_2
+{   
+	clear: both;
+    width: 705px;
+	height: 125px;
+	background: url("../images/fond_listing2.png") no-repeat;
+	margin-bottom: 10px;
+}
+.bloc_lien_listing_1
+{
+	display: block;
+	width: 705px;
+	height: 125px;
+}
+.bloc_lien_listing_2
+{
+	display: block;
+	width: 705px;
+	height: 125px;
+}
+.p_titre_listing
+{
+	padding: 10px 0 0 10px;
+}
+.bloc_adresse_listing
+{
+	position: absolute;
+	margin: 5px 0 0 10px;
+}
+.bloc_logo_urgent
+{
+	clear: both;
+	padding-top: 9px;
+}
+.bloc_categorie_listing
+{
+	position: absolute;
+	margin: 25px 0 0 170px;
+}
+.bloc_photo_listing
+{
+    position: absolute;
+	margin: -15px 0 0 430px;
+}
+.bloc_date_listing
+{
+	position: absolute;
+	width: 128px;
+	margin: 20px 0 0 580px;
+	text-align: center;
+}
+
+/*  -----  VITRINES PREMIUM -----  */
+
+#menu_vi_premium
+{
+	clear: both;
+	margin: auto;
+    width: 950px;
+	height: 179px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.fond_vit_premium
+{
+	float: left;
+    width: 183px;
+	height: 179px;
+	background: url("../images/fond_vit_une.png") no-repeat;
+	margin-right: 7px;
+	text-align: center;
+}
+
+/*  -----  LISTING VITRINES -----  */
+
+.fond_vit_listing_1
+{   
+	clear: both;
+    width: 705px;
+	height: 125px;
+	background: url("../images/fond_listing5.png") no-repeat;
+	margin-bottom: 10px;
+}
+.fond_vit_listing_2
+{   
+	clear: both;
+    width: 705px;
+	height: 125px;
+	background: url("../images/fond_listing7.png") no-repeat;
+	margin-bottom: 10px;
+}
+.bloc_lien_listing_3
+{
+	display: block;
+	width: 705px;
+	height: 125px;
+}
+.bloc_lien_listing_4
+{
+	display: block;
+	width: 705px;
+	height: 125px;
+}
+.bloc_titre_listing_vit
+{
+	position: absolute;
+	margin: 20px 0 0 10px;
+}
+.bloc_region_listing_vit
+{
+	position: absolute;
+	margin: 25px 0 0 280px;
+}
+.bloc_photo_listing_vit
+{
+    position: absolute;
+	margin: -15px 0 0 545px;
+}
+
+/*  ----- RECHERCHE -----  */
+
+#corps_recherche
+{   
+	float: left;
+	width: 218px;
+	margin: 10px 0 0 10px;
+}
+#top_menu_recherche
+{
+	float: left;
+	width: 208px;
+	height: 10px;
+	background: url("../images/top_menu_search.png") no-repeat;
+}
+#middle_menu_recherche
+{
+	float: left;
+	width: 208px;
+	background: url("../images/middle_menu_search.png") repeat-y;
+	padding-top: 4px;
+}
+#bottom_menu_recherche
+{
+	float: left;
+	width: 208px;
+	height: 10px;
+	background: url("../images/bottom_menu_search.png") no-repeat;
+	margin-bottom: 10px;
+}
+#left_checkbox_recherche
+{
+	clear: both;
+	float: left;
+	width: 90px;
+	margin: 12px 0 0 18px;
+}
+#right_checkbox_recherche
+{
+	float: left;
+	width: 90px;
+	margin: 12px 0 0 0;
+}
+#submit_recherche
+{
+	clear: both;
+	float: left;
+	margin: 13px 0 5px 17px;
+}
+
+/*  ----- PUB LISTING -----  */
+
+#bloc_pub
+{
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+#img_info_pub
+{   
+	float: left;
+	width: 208px;
+	height: 21px;
+	background: url("../images/img_info_pub.png") no-repeat;
+	margin: 3px 0 15px 0;
+	text-align: center;
+}
+.bloc_pub_texte_listing
+{   
+	clear: both;
+	float: left;
+    width: 208px;
+	height: 65px;
+	background: url("../images/fond_pub_texte.png") no-repeat;
+	margin-bottom: 10px;
+}
+.logo_pub_texte_listing
+{   
+	float: left;
+    width: 60px;
+	margin: 8px 0 0 10px;
+}
+.p_pub_text_listing
+{
+	float: left;
+	width: 130px;
+	padding: 3px 0 0 0;
+}
+.espace_pub
+{
+	height: 8px;
+}
+.pub_script
+{
+	clear: both;
+	float: left;
+	width: 208px;
+	text-align: center;
+}
+
+/*  ----- LISTING SELECTIONS -----  */
+
+#corps_listing_selection
+{   
+	clear: both;
+	float: left;
+	width: 705px;
+	margin: 15px 0 0 15px;
+}
+.supp_selection
+{
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 670px;
+}
+
+/*  ----- PAGE D'UNE ANNONCE -----  */
+
+#bloc_titre_ann
+{   
+	clear: both;
+	float: left;
+	width: 621px;
+	margin: 10px 0 20px 13px;
+}
+#bloc_depot_ann
+{   
+	float: left;
+	width: 304px;
+	margin: 10px 10px 0 0;
+	text-align: right;
+}
+#bloc_vignettes_ann
+{
+	clear: both;
+	float: left;
+	width: 930px;
+	margin: 0 0 0 10px;
+}
+.bloc_vignette_ann
+{
+	float: left;
+	width: 90px;
+	height: 63px;
+	margin-right: 3px;
+	padding-top: 6px;
+	background: url("../images/no_photo4.png") no-repeat;
+	text-align: center;
+}
+#bloc_photo_ann
+{
+	clear: both;
+	float: left;
+	width: 918px;
+	margin: 0 0 0 10px;
+	padding: 25px 0 25px 0;
+	border: 5px solid #DADADA;
+	text-align: center;
+}
+#bloc_video
+{
+	clear: both;
+	float: left;
+	width: 928px;
+	height: 27px;
+	background-color: #ECECEC;
+	margin: 10px 0 0 10px;
+	padding: 13px 0 0 0;
+	text-align: center;
+}
+#bloc_infos_ann
+{
+	clear: both;
+	float: left;
+	width: 928px;
+	margin: 20px 0 0 0;
+}
+#bloc_info_ann_left
+{
+	float: left;
+	width: 205px;
+	margin-left: 13px;
+}
+#bloc_info_ann_right
+{
+	float: left;
+	width: 478px;
+}
+#bloc_contact_ann
+{
+	float: left;
+	width: 232px;
+}
+.bloc_contact_ann
+{
+	clear: both;
+	float: left;
+	width: 232px;
+	height: 28px;
+	border: 1px solid #E3E3E3;
+}
+.bloc_pub_ann
+{   
+	clear: both;
+    width: 234px;
+	height: 65px;
+	background: url("../images/pub_fond_ann.png") no-repeat;
+}
+.p_pub_ann_img
+{   
+	float: left;
+    width: 60px;
+	padding: 8px 0 0 10px;
+	text-align: left;
+}
+.p_pub_ann_txt
+{   
+	float: left;
+    width: 150px;
+	margin: 4px 0 10px 0;
+	text-align: left;
+}
+#bloc_envoye_ann
+{
+	clear: both;
+	float: left;
+	width: 776px;
+	height: 30px;
+	background-color: #ECECEC;
+	margin: 30px 0 0 12px;
+	padding: 10px 0 0 150px;
+}
+#bloc_action_ann
+{
+	clear: both;
+	float: left;
+	width: 928px;
+	margin: 30px 0 20px 10px;
+}
+.bloc_action_ann
+{
+	float: left;
+	width: 230px;
+	height: 28px;
+	border: 1px solid #E3E3E3;
+}
+
+/*  ----- PAGE D'UNE VITRINE -----  */
+
+#bloc_top_vit
+{   
+	float: left;
+	width: 928px;
+	margin: 20px 0 0 10px;
+}
+#bloc_logo_vit
+{
+	float: left;
+	width: 220px;
+}
+#bloc_adresse_vit
+{
+	float: left;
+	width: 200px;
+	margin-left: 30px;
+}
+#bloc_horaires_vit
+{
+	float: left;
+	width: 200px;
+	margin-left: 30px;
+}
+#bloc_site_vit
+{
+	float: left;
+	width: 200px;
+	margin-left: 30px;
+}
+#bloc_separation_vit
+{
+	float: left;
+	width: 928px;
+	height: 1px;
+	margin: 15px 0 0 10px;
+	background-color: #E3E3E3;
+}
+#bloc_bottom_vit
+{   
+	float: left;
+	width: 675px;
+	margin: 10px 0 30px 30px;
+}
+#bloc_bottom_vit_right
+{
+	float: left;
+	width: 232px;
+	margin-top: 10px;
+}
+
+/*  ----- PAGE DE PAIEMENT-----  */
+
+#bloc_paiement
+{   
+	float: left;
+	width: 928px;
+	margin: 20px 0 20px 20px;
+}
+
+/*  ----- FORMULAIRES-----  */
+
+#corps
+{   
+	clear: both;
+	float: left;
+    width: 950px;
+	padding: 30px 0 20px 0;
+}
+#corps_upload
+{   
+	clear: both;
+	float: left;
+    width: 950px;
+	margin: 50px 0 0 0;
+}
+#corps_form
+{   
+	clear: both;
+	float: left;
+    width: 950px;
+	padding-bottom: 25px;
+}
+.f_left_ph
+{
+	float: left;
+	padding-left: 5px;
+	padding-right: 8px;
+}
+.f_left
+{
+	float: left;
+	padding-left: 7px;
+}
+.f_left_2
+{
+	float: left;
+	padding: 3px 0 0 7px;
+}

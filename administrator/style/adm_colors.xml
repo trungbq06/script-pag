@@ -1,0 +1,32 @@
+<couleurs_admin>
+	<couleur id="1">
+		<nom>Fond Menus</nom>
+		<defaut>#eee</defaut>
+		<actuel>#eee</actuel>
+	</couleur>
+	<couleur id="2">
+		<nom>Textes Menus</nom>
+		<defaut>#444</defaut>
+		<actuel>#444</actuel>
+	</couleur>
+	<couleur id="3">
+		<nom>Fond Sous Menus</nom>
+		<defaut>#fff</defaut>
+		<actuel>#fff</actuel>
+	</couleur>
+	<couleur id="4">
+		<nom>Textes Sous Menus</nom>
+		<defaut>#555</defaut>
+		<actuel>#555</actuel>
+	</couleur>
+	<couleur id="5">
+		<nom>Fond</nom>
+		<defaut>#F9F9F9</defaut>
+		<actuel>#F9F9F9</actuel>
+	</couleur>
+	<couleur id="6">
+		<nom>Bandeau Haut</nom>
+		<defaut>#538327</defaut>
+		<actuel>#538327</actuel>
+	</couleur>
+</couleurs_admin>

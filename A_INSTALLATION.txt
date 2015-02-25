@@ -1,0 +1,23 @@
+##################################################
+### SCRIPT PAG TOUT DROITS RESERVES / UTILISATION SOUS LICENCE 
+### http://www.script-pag.com
+##################################################
+
+### INSTALLATION
+
+/// Uploadez les dossiers et fichiers à la racine de votre serveur.
+/// Allez au chemin http://votre-site.com/install et suivez les instructions.
+
+##################################################
+
+### UTILISER LE MOTEUR DE RECHERCHE "RAPIDE"
+
+/// Pour utiliser le moteur de recherche "rapide", vous devez être en mesure de pouvoir configurer votre serveur mysql. 
+/// Sinon, les mots clés de moins de 4 caractères ne pourront pas être pris en compte
+/// Attention, vous devrez également avoir un minimum de 3 annonces. Idem pour les vitrines.
+	
+/// Dans le fichier my.cnf ou my.ini, ajouter la ligne "ft_min_word_len = 1" en dessous de [mysqld]. 
+/// Redémarrez ensuite votre serveur mysql.
+/// Pour terminer, déplacez le dossier "engine" dans le dossier "includes".
+
+##################################################
