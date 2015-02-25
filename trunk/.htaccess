@@ -1,0 +1,12 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^deposer-une-annonce.htm$ depot_form.php [L]
+RewriteRule ^Petites-annonces-([0-9]+)-([a-zA-Z0-9-]+).htm$ ann_reg.php?region=$1 [L]
+RewriteRule ^Categorie-([0-9]+)-[a-zA-Z0-9-]+.htm$ ann_search.php?cat=$1 [L]
+RewriteRule ^Page-([0-9]+)-[a-zA-Z0-9-]+.htm$ page.php?id_page=$1 [L]
+RewriteRule ^Boutique-([0-9]+)-[a-zA-Z0-9-]+.htm$ boutique_page.php?id=$1 [L]
+RewriteRule ^[a-zA-Z0-9-]+-([0-9]+).htm$ ann_page.php?id=$1 [L]
+RewriteRule ^contact.htm$ contact_form.php [L]
+
+SetEnv PHP_VER 5

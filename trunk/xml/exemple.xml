@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<Script_PAG_XML>
+	<annonces>
+		<id_reg>id de la région</id_reg>
+		<id_dep>id du département</id_dep>
+		<id_cat>id de la catégorie</id_cat>
+		<email>Adresse email de l'annonceur</email>
+		<password>Mot de passe de d'annonceur</password>
+		<code_pos>Code postal</code_pos>
+		<ville>Ville</ville>
+		<statut>Statut particulier ou professionnel (Mettre 1 pour particulier, 2 pour professionnel)</statut>
+		<societe>Nom de la société du professionnel</societe>
+		<siret>Siret du professionnel</siret>
+		<type>Type de l'annonce (Mettre 1 pour "offre", 2 pour "recherche", 3 pour "échange", 4 pour "don")</type>
+		<nom>Nom ou pseudo de l'annonceur</nom>
+		<tel>Téléphone de l'annonceur</tel>
+		<titre>Titre de l'annonce</titre>
+		<texte>Texte de l'annonce</texte>
+		<prix>Prix</prix>
+		<tel_cache>Téléphone caché sur les annonces (Mettre N pour non, Y pour oui)</tel_cache>
+		<photo1>Nom de l'image 1 (facultatif)</photo1>
+		<photo2>Nom de l'image 2 (facultatif)</photo2>
+		<photo3>Nom de l'image 3 (facultatif)</photo3>
+		<photo4>Nom de l'image 4 (facultatif)</photo4>
+		<photo5>Nom de l'image 5 (facultatif)</photo5>
+		<photo6>Nom de l'image 6 (facultatif)</photo6>
+		<photo7>Nom de l'image 7 (facultatif)</photo7>
+		<photo8>Nom de l'image 8 (facultatif)</photo8>
+		<photo9>Nom de l'image 9 (facultatif)</photo9>
+		<photo10>Nom de l'image 10 (facultatif)</photo10>
+		<xml_key>La clé unique par annonce</xml_key>
+	</annonces>
+</Script_PAG_XML>

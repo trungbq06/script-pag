@@ -1,0 +1,107 @@
+##################################################
+### SCRIPT PAG TOUT DROITS RESERVES / UTILISATION SOUS LICENCE 
+### http://www.script-pag.com
+##################################################
+
+IMPORTANT A LIRE : EN UTILISANT LE LOGICIEL, L'UTILISATEUR RECONNAIT AVOIR PRIS CONNAISSANCE DU PRÉSENT CONTRAT (CLU),
+EN AVOIR COMPRIS LE CONTENU ET ACCEPTE D'ÊTRE LIÉ PAR SES DISPOSITIONS.
+
+/// Le présent contrat de licence d’utilisation, conclu entre l’utilisateur, ci-après dénommé "vous" (personne physique ou morale)
+/// et Élina-WEB, s’applique au logiciel de gestion de petites annonces Script PAG, ci-après dénommé "le logiciel".
+
+/// Ce contrat régit également toute mise à jour fournie par Élina-WEB, qui remplacerait et/ou compléterait le logiciel original, 
+/// sauf si une telle mise à jour devait s’accompagner d’une licence distincte, auquel cas les modalités de cette licence prévaudraient.
+
+### DURÉE DU CONTRAT
+
+/// Le présent contrat n'a pas de durée limitée, tant que vous respecterez les modalités de la présente licence et accorderez à Élina-WEB
+/// le droit de garder vos informations d'identités dans un support de données, vous pourrez utiliser le logiciel.
+/// En demandant à Élina-WEB la suppression de vos données, vous vous engagez à rendre fin à vos droits d'utilisation et de possession du 
+/// logiciel. Aucun remboursement ne pourra vous être reversés.
+
+### UTILISATION
+
+/// Droits
+
+/// L'acquisition d'une licence vous donne le droit d'installer et d'utiliser le logiciel sur un seul nom de domaine.
+/// Vous pouvez modifier et/ou améliorer le logiciel. Les termes "améliorer" et "modifier" au sens de ce contrat signifie que vous pouvez 
+/// supprimer/séparer/modifier/améliorer les modules de ce logiciel et/ou en ajouter.
+/// Vous pouvez copier le logiciel sur la mémoire locale ou sur une unité de stockage.
+/// Vous pouvez faire des copies archives ou de sauvegarde du logiciel dans la mesure où la copie contient les énoncés de Élina-WEB et sert 
+/// seulement à des fins de sauvegarde.
+
+/// Limitation de droits
+
+/// Vous n'avez pas le droit de vendre, louer ou redistribuer le logiciel sans l'accord préalable écrit de Élina-WEB, ni même de l'utiliser 
+/// en l'associant à un nom de domaine dont vous n'êtes pas le propriétaire.
+/// Vous n'êtes pas autorisé à modifier la mention "Script PAG créé par Élina-WEB", néanmoins vous pouvez la supprimer.
+/// Vous n'avez pas le droit de supprimer ou modifier les mentions de droits d'auteur présent dans les fichiers du logiciel.
+/// Tout ou partie du logiciel doit rester confidentielle et ne doit en aucun cas être diffusée d'aucune manière que ce soit sans l'accord 
+/// préalable écrit de Élina-WEB.
+
+/// Obligation
+
+/// Vous devez transmettre le nom de domaine ou l'adresse internet complète du site Web sur laquelle est installée le logiciel développé.
+/// L'installation ou l'utilisation du logiciel sur un nom de domaine supplémentaire rend obligatoire l'acquisition d'une nouvelle licence.
+/// Vous êtes tenu de communiquer tout changement de situation concernant vos données personnelles.
+
+### RESTRICTIONS SUR LE TRANSFERT
+
+/// Cette licence est personnelle, et vous ne pouvez pas vendre, attribuer, distribuer, transférer ou octroyer en sous-licence les droits 
+/// accordés en vertu du présent contrat ou des copies du logiciel à toute autre personne sans le consentement écrit préalable de Élina-WEB.
+/// Tout transfert en violation de cette section sera nul, mettra fin automatiquement à votre droit d’utilisation et de possession du logiciel
+/// et entraînera des poursuites judiciaires.
+
+### ABUS ET VIOLATION DE DROIT
+
+/// Si un abus de licence est découvert, vous acceptez de renoncer immédiatement à votre licence sur avis de violation de toute modalité du 
+/// présent CLU et vous n’obtiendrez aucun remboursement pour la renonciation à votre licence.
+/// Élina-WEB saura faire valoir ses droits en cas de non respect du présent contrat.
+
+### VERSIONS MISES À JOUR
+
+/// Élina-WEB s'engage à vous fournir gratuitement toutes améliorations et/ou nouveau(x) module(s). Cependant, vous êtes responsable du 
+/// téléchargement et de l’installation des mises à jour du logiciel.
+
+### GARANTIE
+
+/// Élina-WEB met à disposition de sa clientèle un support technique téléphonique et électronique, ouvert du lundi au vendredi de 9h30 à 18h.
+/// Élina-WEB garantit le bon fonctionnement du logiciel dans les conditions requises suivantes :
+/// -PHP Version 5.3 ou antérieure
+/// -MYSQL Version 5.0 ou antérieure
+/// Élina-WEB garantit l'exploitation et l'opérabilité du logiciel dès son installation.
+/// Élina-WEB assure un support de récupération des fichiers d'origine.
+
+### LIMITATION DE RESPONSABILITÉ
+
+/// EN AUCUN CAS ÉLINA-WEB NE SAURAIT ÊTRE TENU RESPONSABLE DE DOMMAGES INDIRECTS, CONSÉCUTIFS OU PARTICULIERS, DE PRÉJUDICES DIRECTS, INDIRECTS, 
+/// SPÉCIAUX, FORTUITS OU INDUITS, Y COMPRIS LES PERTES DE PROFITS ET D’EXPLOITATION, OU LA PERTE DE DONNÉES DÉCOULANT DE L’UTILISATION OU DE 
+/// L’INCAPACITÉ D’UTILISATION DU LOGICIEL, MÊME SI ÉLINA-WEB A ÉTÉ AVISÉ DE LA POSSIBILITÉ DE TELS DOMMAGES.
+/// LA RESPONSABILITE D'ÉLINA-WEB NE SAURAIT ÊTRE ENGAGÉE DANS LE CAS DE MANIPULATION, MODIFICATION, SUPPRESSION DE FICHIER SOURCE AINSI QUE DE LA
+/// CONFIGURATION MATÉRIELLE OU LOGICIELLE CÔTÉ CLIENT OU CÔTÉ SERVEUR AINSI QUE DES PROBLÈMES LIÉS À DU MATERIEL OU LOGICIEL OBSELÈTE.
+/// ÉLINA-WEB DÉCLINE TOUT RESPONSABILTÉ CONCERNANT L'UTILISATION ET LES RÉSULTATS OBTENUS À PARTIR DU LOGICIEL.
+
+### DROIT D’AUTEUR
+
+/// Le logiciel est la propriété exclusive de Élina-WEB.
+/// Élina-WEB conservent tous les droits d’auteur associés au logiciel. À l’exception des cas expressément prévus dans le contrat de licence ci-dessus,
+/// vous ne pouvez pas copier, reproduire, distribuer, louer, ou créer des sites dérivés fondés sur le logiciel. Tous les droits qui ne sont pas 
+/// expressément accordés sont réservés.
+/// Toute copie du logiciel que vous avez le droit de faire conformément au présent contrat doit comprendre tous les avis de droit d’auteur et autres
+/// avis inclus dans la copie originale du logiciel.
+
+### DIVISIBILITÉ
+
+/// Dans le cas où toute modalité de ce CLU est déclarée invalide, illégale ou inexécutable, une modalité modifiée, qui respecte le plus possible l’intention originale des parties doit être substituée et la validité, la légalité et le caractère exécutoire de toute autre modalité ne doivent être touchés ou compromis.
+
+### LOI APPLICABLE
+
+/// Ce contrat est régi par les lois françaises en vigueur. Si toute partie de ce contrat est déclarée nulle ou inexécutable, cela n’aura aucune conséquence sur la validité du reste du contrat, qui demeure valide et exécutable selon ses modalités.
+
+### LICENCE DE LOGICIEL
+
+/// Élina-WEB se réserve le droit de modifier ou de mettre à jour toute partie de ce contrat à tout moment et sans préavis.
+/// Vous trouverez le contrat le plus récent à l’adresse suivante :
+/// http://www.script-pag.com/licence.php. 
+ 
+##################################################

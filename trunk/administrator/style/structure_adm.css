@@ -1,0 +1,359 @@
+/* -----  BASE ------  */
+
+html
+{
+	
+}
+body 
+{
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    background: #FBFBFB;
+    display: none;
+}
+p 
+{
+    margin: 0;
+}
+img 
+{
+    border: 0;
+}
+li 
+{
+   list-style-type: none;
+}
+ul
+{
+   margin: 0;
+   padding: 0;
+}
+
+/* ----- TOP HEADER -----  */
+
+
+#haut_adm
+{   
+	margin: auto;
+	position:fixed;    
+	float: none;
+	width: 100%;
+	min-height: 75px;
+	background: url("../images/top_adm.png") no-repeat 12px 7px;
+	margin: 0;
+	z-index: 10;
+	top:0;
+	left:0;
+	overflow: hidden;
+	border: 1px solid #639700;
+	margin-bottom: 10px;
+}
+#haut_adm_left
+{   
+	float: left;
+	width: 150px;
+	margin: 34px 0 0 230px;
+}
+#haut_adm_right
+{   
+    float: right;
+	margin: 42px 27px 0 0;
+}
+
+
+/* ----- FORMULAIRE DE CONNEXION -----  */
+
+#haut_con_adm
+{   
+    clear: both;
+	margin: auto;
+    width: 95%;
+	height: 30px;
+	background: none;
+	margin-top:90px;
+	border:0;
+	border-bottom:solid 1px #999999;
+	color:#777;
+}
+#fond_con_adm
+{   
+    clear: both;
+	float: left;
+	margin: auto;
+    width: 898px;
+	margin-top:40px;
+	border:none;
+	padding:0;
+	width:90%
+}
+.form_left_adm_con			
+{
+	clear: both;
+	float: left;
+	width: 45%;
+	font-family: Arial; 
+	font-size: 0.7em; 
+	color: #473330;
+	text-align: right;
+    padding: 5px 0 0 0;
+}
+.form_right_adm_con	
+{
+	float: left;
+	width: 50%;
+	margin: 5px 0 0 5px;
+}
+
+/* ----- FOOTER-----  */
+
+#bas_adm
+{   
+    clear: both;
+	float: left;
+	margin: auto;
+    width: 100%;
+	height: 35px;
+	background: none;
+	border: none;
+	margin: 0;
+}
+
+/* ----- CORPS ADMIN -----  */
+
+#corps_admin
+{   
+    margin: auto;
+	float: left;
+	width:100%;
+}
+
+/* ----- MENUS GAUCHE -----  */
+
+#menu_left
+{   
+    float: left;
+	width:280px;
+	position:fixed;
+	top:78px;
+	left:0;
+	margin:0;
+	padding-top:10px;
+	background:none;
+}
+.menus_haut
+{   
+    float: left;
+	width: 260px;
+	height: 30px;
+	background:none;
+	border: none;
+}
+.menus_fond
+{   
+    float: left;
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background: transparent
+}
+
+/* ----- MENU DROIT -----  */
+
+#menu_right
+{   
+    float: left;
+	width: 618px;
+	margin-left: 10px;
+}
+.menus_r_haut
+{   
+    float: left;
+	width: 100%;
+	height: 30px;
+	background: url("../images/fond_top_menu.png") repeat-x;
+	border: 1px solid #639700;
+}
+.menus_r_fond
+{   
+    float: left;
+	width: 100%;
+	border: 1px solid #639700;
+	border-top: none;
+	padding: 25px 0 25px 0;
+}
+
+/* ----- PADS -----  */
+
+.pads_wrap
+{
+	display: block;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.pads
+{
+	display: block;
+	float: left;
+	width: 27%;
+	max-width: 180px;
+	height: 120px;
+	margin: 0 4% 20px 0;
+	padding: 30px 2% 0 2%;
+	text-align: center;
+	font-size: 1.5em;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.pads, .pads a
+{
+	color:#fff;
+	text-decoration: none;
+}
+.pads span
+{
+	display: block;
+	font-size: 1.7em;
+	margin-bottom: 5px;
+}
+.return
+{
+	clear:both;
+}
+#lien_config
+{
+	background:url("../images/img_config_adm.png") center center no-repeat;
+	padding-left:35px;
+	margin-right:5px;
+	opacity:0.7;
+}
+.adm_ico
+{
+	margin: 5px 5px 0 5px;
+	float: left;
+}
+.plus_icone
+{
+	background:url("../images/ico_plus.png") top center no-repeat;
+	width:8px;
+	height:8px;
+	margin:7px 7px 0 0;
+	float:right;
+	font-size:0.8em;
+	font-weight:bold;
+}
+
+
+/* ----- RECHERCHE -----  */
+
+#recherche
+{
+	clear: both;
+	float: left;
+	margin: 0 0 0 30px;
+}
+.recherche_l
+{
+	float: left;
+	height: 30px;
+	margin-left: 2px;
+}
+#recherche_l_submit
+{
+	float: left;
+	margin-left: 5px;
+	padding-top: 2px;
+}
+
+/* ----- FORMULAIRES -----  */
+
+.form_left			
+{
+	clear: both;
+	float: left;
+	width: 230px;
+	font-family: Arial; 
+	font-size: 0.7em; 
+	color: #473330;
+	text-align: right;
+    padding: 5px 0 0 0;
+	margin: 5px 0 0 0;
+}
+.form_right	
+{
+	float: left;
+	width: 350px;
+	margin: 5px 0 0 5px;
+}
+.form_left_2			
+{
+	clear: both;
+	float: left;
+	width: 180px;
+	font-family: Arial; 
+	font-size: 0.7em; 
+	color: #473330;
+	text-align: right;
+    padding: 5px 0 0 0;
+	margin: 5px 0 0 0;
+}
+.form_right_2
+{
+	float: left;
+	width: 400px;
+	margin: 5px 0 0 5px;
+}
+.form_left_3			
+{
+	clear: both;
+	float: left;
+	width: 90px;
+	font-family: Arial; 
+	font-size: 0.7em; 
+	color: #473330;
+	text-align: right;
+    padding: 5px 0 0 0;
+	margin: 5px 0 0 0;
+}
+.form_right_3
+{
+	float: left;
+	width: 490px;
+	margin: 5px 0 0 5px;
+}
+.form_right_radio
+{
+	float: left;
+	width: 350px;
+	margin: 8px 0 0 5px;
+}
+.form_right_checkbox
+{
+	float: left;
+	width: 350px;
+	margin: 8px 0 0 3px;
+}
+
+/* ----- CONTENU -----  */
+
+.bloc_contenu
+{
+	clear: both;
+	float: left;
+	width: 91%;
+	margin: 10px 0 0 30px;
+	padding: 15px 20px 15px 20px;
+	border: 1px solid #E4E4E4;
+	background-color: #F0F0F0;
+}
+
+/* ----- PAGINATION -----  */
+
+#pagination
+{
+	clear: both;
+	float: left;
+	margin: 20px 0 0 30px;
+}
