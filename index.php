@@ -75,8 +75,8 @@ $info_page = $language['infos_page_accueil'];
 //////////////////////////////////
 
 htm_header_acc($title, $description, $words);
-if($param_gen['active_une'] == 1) htm_top_ads($search_array_une);
-display_index_text_index($info_page);
+// if($param_gen['active_une'] == 1) htm_top_ads($search_array_une);
+// display_index_text_index($info_page);
 display_index_center();
-htm_categories();
+// htm_categories();
 htm_footer();
