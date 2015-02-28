@@ -26,45 +26,228 @@ function htm_header_acc($title, $description, $words)
 <meta name="Keywords" lang="fr" content="<?php if (!empty($words)) echo $words; ?>" />
 <meta name="Robots" content="all" />
 
-<link href="style/structure.css" type="text/css" rel="stylesheet" />
-<link href="style/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="style/screen.css" />
+<link rel="stylesheet" type="text/css" href="style/structure.css" />
+<link rel="stylesheet" type="text/css" href="style/style.css" />
 
 </head>
 
 <body>
 
-<div id="top_header">
-
-	<div id="menu_top_header">
-	
-		<ul id="left_top_header">
-			<?php 
-			
+<div id="mast">
+	<div>
+		<h1><img src="img/logo.png" width="318" height="100" alt="MegaDeals - petites annonces faciles et gratuites" /></h1>
+		<div class="info">
+			<?php
 			if(empty($_SESSION['connect']))
 			{
-				if($param_gen['actif_acc'] == 2 || $param_gen['actif_acc'] == 3) echo '<li class="li_top_header"><img src="images/top_header_fl.png" alt="" /><a href="acc_conn.php?type=1">'. $language['lien_compte'] .'</a></li>';
-				if($param_gen['actif_acc'] > 1) echo '<li class="li_top_header"><img src="images/top_header_fl.png" alt="" /><a href="acc_conn.php?type=2">'. $language['lien_compte_pro'] .'</a></li>'; 
+				if($param_gen['actif_acc'] == 2 || $param_gen['actif_acc'] == 3) {
+					echo '<p><a href="acc_conn.php?type=1">Login Member</a></p>';
+				}
+				if($param_gen['actif_acc'] > 1) {
+					echo '<p><a href="acc_conn.php?type=2">Login PRO</a></p>';
+				}
 			}
 			else 
 			{
-				echo '<li class="li_top_header"><span class="" />'. $language['lien_bienvenue'] .' '. $_SESSION['prenom'] .'</span></li>';
-				echo '<li class="li_top_header"><img src="images/top_header_fl.png" alt="" /><a href="acc_bord.php">'. $language['compte_lien_bord1'] .'</a></li>';
-				echo '<li class="li_top_header"><img src="images/top_header_fl.png" alt="" /><a href="acc_logout.php">'. $language['compte_lien_bord5'] .'</a></li>';
-			}			
-			
+				echo '<p><a href="acc_bord.php">My Account</a></p>';
+				echo '<p><a href="acc_logout.php">LogOut</a></p>';
+			}
 			?>
-		</ul>
-		
-		<div id="right_top_header">
-			<p id="p_top_header"><span class="vert_1"><?php echo $cache_nombre_annonce['total']; ?></span> <?php echo $language['nombre_annonce']; ?></p>
+			<div class="publisher">
+				<a href="#" class="btnStyle">Publier une annonce gratuite</a>
+			</div>
 		</div>
-	
 	</div>
+</div>
 
+<div id="main-global">
+	<div id="nav">
+		<ul>
+			<li><span>home</span></li>
+			<li><a href="#">all wanted</a></li>
+			<li><a href="#">all swaps</a></li>
+			<li><a href="#">all donations</a></li>
+			<li><a href="#">online shop</a></li>
+			<li><a href="#">Help</a></li>
+		</ul>
+	</div>
+	
+	<form action="#" method="post" class="searchFrm">
+		<input type="text" id="inpSearch" value="We have 3456 900 annonces for you" />
+		<input type="text" id="inpPstCode" value="Postcode or location" />
+		<input type="submit" value="" />
+		<select name="distance" id="distance">
+			<option value="0">0 km</option>
+			<option value="1">5 km</option>
+			<option value="2">10 km</option>
+			<option value="3">15 km</option>
+			<option value="4">20 km</option>
+		</select>
+		<ul class="listPays">
+			<li><a href="javascript:;">Alsace</a>
+				<ul>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum dolores lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum lor</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsumlorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;">Aquitaine</a>
+				<ul>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum dolores lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum lor</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsumlorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;">Auvergne</a>
+				<ul>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum dolores lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum lor</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsumlorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;">Basse-Normandie</a></li>
+			<li><a href="javascript:;">Bourgogne</a></li>
+			<li><a href="javascript:;">Bretagne</a>
+				<ul>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum dolores lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum lor</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsumlorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;">Centre</a></li>
+			<li><a href="javascript:;">Champagne-Ardenne</a></li>
+			<li><a href="javascript:;">Corse</a></li>
+			<li><a href="javascript:;">Franche-Comté</a></li>
+			<li><a href="javascript:;">Haute-Normandie</a>
+				<ul>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum dolores lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum lor</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsumlorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;">Île-de-France</a></li>
+			<li><a href="javascript:;">Languedoc-Roussillon</a></li>
+			<li><a href="javascript:;">Limousin</a>
+				<ul>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum dolores lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum lor</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsumlorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;">Lorraine</a></li>
+			<li><a href="javascript:;">Midi-Pyrénées</a></li>
+			<li><a href="javascript:;">Nord-Pas-de-Calais</a></li>
+			<li><a href="javascript:;">Pays-de-la-Loire</a></li>
+			<li><a href="javascript:;">Picardie</a>
+				<ul>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum dolores lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum lor</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsumlorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;">Poitou-Charentes</a></li>
+			<li><a href="javascript:;">P.A.C.A.</a></li>
+			<li><a href="javascript:;">Rhône-Alpes</a></li>
+			
+			<li class="otherLink"><a href="#">Guadeloupe</a></li>
+			<li><a href="javascript:;">Martinique</a></li>
+			<li><a href="javascript:;">Guyane</a></li>
+			<li><a href="javascript:;">Réunion</a>
+				<ul>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum dolores lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum lor</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum lorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+					<li><a href="javascript:;">City lorem ipsumlorem</a></li>
+					<li><a href="javascript:;">City lorem ipsum</a></li>
+				</ul>
+			</li>
+		</ul>
+	</form>
 </div>
 
 <?php
-
+/*
 $image = '';
 $url = '';
 
@@ -78,18 +261,18 @@ foreach($cache_publicites as $v)
 }
 
 if(!empty($image)) echo '<a id="fond" style=\'background: url("images/pub/'. $image .'") center top;\' href="'. $url .'" onclick="window.open(this.href); return false;"></a><a href="'. $url .'"><p style="height: 170px;"></p></a>';
-
+*/
 ?>
-
+<!--
 <div id="fond_site_1">
 <div id="fond_site_2">
 
 <?php 
-
+/*
 	if(is_dir('install')) echo '<div><span class="error">'. $language['error_install_file'] .'</span></div>'; 
 	if(is_dir('admin')) echo '<div><span class="error">'. $language['error_admin_file'] .'</span></div>'; 
 	if(is_dir('cron')) echo '<div><span class="error">'. $language['error_cron_file'] .'</span></div>';
-
+*/
 ?>
 
 <div id="haut_site">
@@ -100,7 +283,7 @@ if(!empty($image)) echo '<a id="fond" style=\'background: url("images/pub/'. $im
 	
 	<div id="haut_site_pub">
 		<?php
-		
+			/*
 			$image = '';
 			$url = '';
 			$script = '';
@@ -119,7 +302,7 @@ if(!empty($image)) echo '<a id="fond" style=\'background: url("images/pub/'. $im
 			echo $script;
 			
 			else echo '<p><a href="'. $url .'" onclick="window.open(this.href); return false;"><img src="images/pub/'. $image .'" alt="" /></a></p>';
-			
+			*/
 		?>
 	</div>
 	
@@ -129,23 +312,24 @@ if(!empty($image)) echo '<a id="fond" style=\'background: url("images/pub/'. $im
 
 	<div id="barre_liens">
 		<ul class="ul_barre">
-			<li class="li_barre"><a href="<?php echo URL; ?>"><?php echo $language['lien_accueil']; ?></a></li>
+			<li class="li_barre"><a href="<?php// echo URL; ?>"><?php// echo $language['lien_accueil']; ?></a></li>
 			<li class="li_barre"><strong><a href="ann_type.php?type=1"><?php echo $language['lien_offres']; ?></a></strong></li>
-			<li class="li_barre"><a href="ann_type.php?type=2"><?php echo $language['lien_recherches']; ?></a></li>
-			<?php if($param_gen['active_ech'] == 1) echo '<li class="li_barre"><a href="ann_type.php?type=3">'. $language['lien_echanges'] .'</a></li>'; ?>
-			<?php if($param_gen['active_don'] == 1) echo '<li class="li_barre"><a href="ann_type.php?type=4">'. $language['lien_dons'] .'</a></li>'; ?>
-			<?php if($param_gen['actif_acc'] > 1 && $param_gen['active_bout'] == 1) echo '<li class="li_barre"><a href="boutiques_search.php">'. $language['lien_boutiques'] .'</a></li>'; ?>
+			<li class="li_barre"><a href="ann_type.php?type=2"><?php// echo $language['lien_recherches']; ?></a></li>
+			<?php// if($param_gen['active_ech'] == 1) echo '<li class="li_barre"><a href="ann_type.php?type=3">'. $language['lien_echanges'] .'</a></li>'; ?>
+			<?php// if($param_gen['active_don'] == 1) echo '<li class="li_barre"><a href="ann_type.php?type=4">'. $language['lien_dons'] .'</a></li>'; ?>
+			<?php// if($param_gen['actif_acc'] > 1 && $param_gen['active_bout'] == 1) echo '<li class="li_barre"><a href="boutiques_search.php">'. $language['lien_boutiques'] .'</a></li>'; ?>
 		</ul>
 	</div>
 	
 	<div id="barre_liens_depot">
-		<a href="<?php if($param_gen['actif_acc'] == 2 && !isset($_SESSION['connect'])) echo 'acc_info.php'; else echo 'deposer-une-annonce.htm'; ?>"><img src="images/bouton_depot.png" alt="" /></a>
+		<a href="<?php// if($param_gen['actif_acc'] == 2 && !isset($_SESSION['connect'])) echo 'acc_info.php'; else echo 'deposer-une-annonce.htm'; ?>"><img src="images/bouton_depot.png" alt="" /></a>
 	</div>
 	
 </div>
-
+-->
 <?php
 }
+
 
 /// ----- HEADER PRINCIPAL -----  ///
 
@@ -167,8 +351,9 @@ function htm_header($title, $description, $words)
 <meta name="Keywords" lang="fr" content="<?php if (!empty($words)) echo $words; ?>" />
 <meta name="Robots" content="all" />
 
-<link href="style/structure.css" type="text/css" rel="stylesheet" />
-<link href="style/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="style/screen.css" />
 
 <script type="text/javascript">
 function autoCompOff(){
@@ -573,45 +758,81 @@ function display_index_center()
 
 <div id="bloc_center">
 <div id="middle_bloc_center">
+	
+	<div id="carte-main">
+		<div id="carte">
+		<div id="bulle"></div>
 
-	<div id="carte">
-	<div id="bulle"></div>
-
-		<p id="map_region">
-			<map name="FranceMap" id="france">
-				<area alt="" onmouseover="MapReg(1); MapRegBulle('Alsace', '<?php echo $cache_nombre_annonce['reg_1']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="576,137,593,137,599,140,602,141,600,147,598,151,596,154,593,158,591,163,588,167,586,169,584,179,584,186,583,192,579,199,578,203,578,208,579,214,578,225,577,231,578,235,580,241,578,245,577,247,575,248,572,253,565,253,562,251,563,248,559,248,557,244,556,241,554,241,553,232,545,227,547,223,548,216,555,202,558,193,558,191,554,187,553,180,554,175,559,174,560,169,559,165,562,160,562,157,558,154,553,154,551,156,550,155,551,151,547,150,546,148,551,137,556,141,561,144,565,145,574,144" href="Petites-annonces-1-Alsace.htm" />
-				<area alt="" onmouseover="MapReg(2); MapRegBulle('Aquitaine', '<?php echo $cache_nombre_annonce['reg_2']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="172,391,180,398,185,404,189,413,190,411,189,406,194,406,197,407,197,409,203,410,204,412,204,416,207,419,211,422,216,423,220,424,221,424,223,421,224,417,227,415,232,414,237,408,238,402,238,400,245,396,247,393,249,388,253,384,255,382,261,383,262,390,266,389,271,389,275,391,280,395,279,398,282,400,285,402,288,407,284,412,285,414,285,417,283,417,287,421,289,423,292,428,294,433,292,438,292,443,288,445,286,447,287,450,286,451,282,453,278,456,277,459,274,462,271,466,274,473,273,476,273,477,268,478,265,479,268,484,265,486,263,489,265,493,261,494,260,497,255,499,252,501,247,499,244,499,240,503,236,503,231,501,230,503,226,504,225,503,223,507,222,508,221,504,212,508,210,508,211,516,208,521,207,527,208,530,215,532,218,537,218,539,216,542,220,542,221,549,218,550,218,553,218,555,212,562,210,565,209,569,206,571,205,573,201,581,202,584,197,586,193,586,190,586,182,577,180,575,172,575,165,572,159,569,156,566,156,563,154,564,152,566,152,568,147,566,146,564,149,558,151,554,150,551,147,550,144,549,140,550,139,552,140,548,138,547,134,544,141,537,146,528,157,488,160,471,161,459,163,455,165,454,171,454,173,453,170,448,167,445,163,452,163,437,166,422,168,405,169,397,171,391" href="Petites-annonces-2-Aquitaine.htm" />
-				<area alt="" onmouseover="MapReg(3); MapRegBulle('Auvergne', '<?php echo $cache_nombre_annonce['reg_3']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="334,332,339,325,348,323,349,321,348,316,349,314,352,312,358,310,361,308,364,306,369,305,374,312,378,314,384,313,387,312,390,314,394,312,398,309,401,317,405,321,407,324,412,326,415,329,415,336,412,341,411,342,406,343,405,346,407,357,407,361,402,366,403,369,402,375,404,382,408,385,412,390,415,396,416,399,412,405,415,406,418,407,427,405,431,405,436,409,436,412,440,412,440,416,440,420,439,422,437,422,435,427,431,432,432,434,428,435,425,440,423,441,418,443,414,446,410,450,402,443,400,442,398,442,398,445,393,443,391,442,389,438,387,436,384,438,378,441,376,439,370,454,367,457,365,452,366,450,363,447,362,443,361,441,355,438,352,441,350,444,349,449,344,455,342,458,336,456,335,457,331,460,329,459,328,453,329,448,328,446,325,441,324,434,326,432,325,429,328,427,330,423,333,421,330,418,334,413,338,407,339,403,344,406,344,390,346,386,342,378,340,374,340,373,349,364,347,357,347,353,347,347,342,341,335,337" href="Petites-annonces-3-Auvergne.htm" />
-				<area alt="" onmouseover="MapReg(4); MapRegBulle('Basse Normandie', '<?php echo $cache_nombre_annonce['reg_4'] ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="147,92,156,96,161,97,167,96,171,95,178,96,176,103,176,107,180,113,183,119,186,118,189,117,195,120,200,122,206,122,214,123,218,126,226,126,234,123,238,119,244,118,246,118,246,125,247,127,249,127,246,129,248,133,250,139,250,142,248,143,250,146,250,150,250,154,250,155,257,156,261,160,266,165,265,169,268,171,268,174,272,178,274,182,273,190,273,191,271,192,267,195,266,196,265,205,261,202,259,200,257,200,252,199,249,196,247,194,247,188,244,184,241,185,236,187,230,191,228,191,227,187,222,184,222,181,220,178,217,179,217,182,207,182,204,183,201,186,198,183,195,185,194,185,191,180,184,181,180,179,176,177,174,179,169,183,166,183,163,178,161,171,160,170,166,170,169,167,170,165,166,167,164,166,159,156,161,148,162,141,160,138,160,128,156,122,151,117,149,104" href="Petites-annonces-4-Basse-Normandie.htm" />
-				<area alt="" onmouseover="MapReg(5); MapRegBulle('Bourgogne', '<?php echo $cache_nombre_annonce['reg_5']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="369,195,386,192,392,195,395,203,397,208,400,207,405,214,407,221,411,224,417,222,423,222,426,223,429,221,433,222,438,220,442,217,448,217,451,220,452,222,453,223,452,225,456,226,459,230,457,233,456,236,459,240,468,243,472,246,474,247,479,244,480,243,484,249,482,253,479,255,484,261,485,265,483,268,482,272,482,276,480,280,476,282,474,286,474,291,479,295,482,298,479,302,479,303,482,308,483,314,480,317,479,323,480,326,476,327,472,324,467,324,461,324,459,324,453,348,448,342,447,339,445,341,442,340,438,341,436,340,435,342,434,345,428,349,425,347,423,348,416,348,413,346,411,343,413,339,415,336,415,329,409,325,405,323,402,320,398,308,390,314,386,310,381,313,376,312,373,309,370,304,370,292,371,288,368,284,367,274,363,269,363,267,363,259,362,253,362,252,365,250,367,248,364,241,360,239,369,232,368,228,371,222,372,219,371,215,364,207,368,203" href="Petites-annonces-5-Bourgogne.htm" />
-				<area alt="" onmouseover="MapReg(6); MapRegBulle('Bretagne', '<?php echo $cache_nombre_annonce['reg_6']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="16,166,26,167,23,164,33,160,35,160,35,161,50,157,52,156,51,164,54,162,56,164,58,159,61,159,65,163,68,162,68,160,70,157,71,153,74,151,76,154,84,150,86,149,87,152,91,150,90,157,94,153,94,156,97,158,100,160,103,165,104,170,108,172,109,177,119,166,125,167,125,170,127,169,130,169,131,172,133,171,135,171,136,168,140,174,144,177,140,170,145,164,147,168,147,171,160,171,163,180,166,182,172,180,177,178,182,180,182,189,181,194,179,196,180,201,182,212,182,216,181,218,175,219,171,227,171,231,164,228,160,230,154,232,152,234,151,235,143,235,135,237,131,240,130,245,128,249,121,249,116,251,113,248,108,247,98,247,96,244,102,244,103,241,100,238,96,239,93,240,92,235,91,240,89,241,87,240,83,245,83,239,82,236,81,233,85,233,78,233,75,230,78,227,75,226,73,222,73,230,69,229,68,221,65,225,62,225,58,222,56,221,53,221,48,217,43,217,40,209,40,218,35,221,28,221,29,216,23,206,17,205,14,202,25,199,33,199,35,195,30,191,25,191,23,193,21,185,29,186,36,186,35,182,30,182,28,179,19,181,14,180,13,172" href="Petites-annonces-6-Bretagne.htm" />
-				<area alt="" onmouseover="MapReg(7); MapRegBulle('Centre', '<?php echo $cache_nombre_annonce['reg_7']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="269,169,277,167,283,164,287,165,291,164,294,157,298,153,302,160,304,169,303,172,309,177,313,182,312,187,317,188,320,195,322,200,329,198,331,195,332,197,336,196,339,197,340,200,344,205,345,207,344,210,352,211,364,209,371,215,373,221,371,225,369,227,368,230,367,234,363,239,361,241,366,246,366,251,363,253,363,260,363,267,367,274,369,284,370,287,371,290,370,304,367,306,363,306,360,309,352,312,347,316,349,320,348,323,341,323,338,325,336,331,328,332,319,332,311,328,308,332,299,334,295,335,291,337,290,334,285,335,282,334,283,331,279,327,279,323,272,321,269,316,270,310,264,304,260,296,260,292,254,290,253,293,244,292,242,291,240,284,237,284,236,281,232,278,230,277,235,260,237,255,238,247,245,248,246,246,254,244,258,239,259,236,263,233,267,224,268,219,267,213,268,209,266,203,266,197,274,191,274,182,268,174" href="Petites-annonces-7-Centre.htm" />
-				<area alt="" onmouseover="MapReg(8); MapRegBulle('Champ. Ardenne', '<?php echo $cache_nombre_annonce['reg_8']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="436,78,440,76,442,70,444,66,447,64,449,66,447,70,449,79,450,83,449,90,457,91,462,95,467,97,471,100,470,104,468,107,463,105,461,105,461,110,459,117,457,121,458,127,454,129,455,137,456,142,456,145,458,147,458,150,455,153,453,156,454,162,457,167,460,172,463,177,473,182,479,186,479,188,478,191,491,199,490,203,489,209,494,214,496,220,498,219,501,221,499,224,498,227,493,226,493,229,492,237,490,241,486,239,484,237,480,241,475,246,472,246,470,242,462,239,458,239,457,234,459,230,456,226,454,225,452,221,450,219,449,217,440,217,436,219,431,221,426,223,422,222,411,225,408,223,404,210,401,208,399,206,398,209,395,199,391,193,388,191,386,190,386,182,390,180,392,175,386,163,388,158,397,148,396,145,395,141,395,139,399,137,397,127,399,124,406,121,411,121,413,121,414,101,417,101,421,94,421,90,420,85,421,79,432,80,438,78" href="Petites-annonces-8-Champagne-Ardenne.htm" />
-				<area alt="" onmouseover="MapReg(9); MapRegBulle('Corse', '<?php echo $cache_nombre_annonce['reg_9']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="604,536,610,534,611,539,613,548,613,552,612,555,613,560,617,565,618,574,620,590,620,597,617,601,614,607,615,612,617,622,615,628,613,633,611,635,614,636,612,643,609,649,607,651,603,649,602,647,594,644,588,641,584,634,590,629,584,629,581,628,583,621,583,616,582,612,575,616,577,607,581,604,575,601,570,597,570,593,576,590,574,585,570,584,569,583,573,576,576,571,580,567,581,565,592,561,596,555,604,555,606,555,606,546,605,538" href="Petites-annonces-9-Corse.htm" />
-				<area alt="" onmouseover="MapReg(10); MapRegBulle('Franche Comté', '<?php echo $cache_nombre_annonce['reg_10']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="500,220,509,215,517,219,524,217,530,221,534,219,543,226,548,227,553,233,553,240,557,242,559,246,559,248,554,249,552,252,550,256,552,258,556,261,553,263,552,267,549,270,545,277,541,283,537,286,531,290,530,298,530,304,519,313,516,316,514,326,510,331,506,336,503,339,497,339,496,338,495,335,492,334,487,340,485,337,484,335,482,335,477,327,479,325,480,317,482,315,482,310,480,303,478,302,483,298,477,294,474,292,474,286,477,281,482,275,484,268,484,265,481,256,479,254,482,249,482,245,479,241,486,238,490,240,492,235,493,228,498,226,500,224" href="Petites-annonces-10-Franche-Comte.htm" />
-				<area alt="" onmouseover="MapReg(11); MapRegBulle('Haute Normandie', '<?php echo $cache_nombre_annonce['reg_11']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="242,96,258,88,271,84,284,82,289,78,295,74,302,80,308,85,312,91,312,95,309,98,309,103,310,109,308,116,308,121,312,127,311,131,309,132,306,135,305,142,302,142,298,145,298,150,298,154,293,160,292,163,283,164,277,167,271,169,265,172,263,167,264,164,257,155,251,155,250,148,249,144,249,136,247,131,248,128,246,125,245,119,248,116,240,114,236,112,241,101" href="Petites-annonces-11-Haute-Normandie.htm" />
-				<area alt="" onmouseover="MapReg(12); MapRegBulle('Ile de France', '<?php echo $cache_nombre_annonce['reg_12']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="308,133,311,137,320,136,326,135,332,136,336,135,342,139,348,142,353,143,357,143,358,142,362,143,367,141,373,141,374,143,374,146,377,149,383,155,388,157,389,159,386,163,387,167,389,173,391,175,390,178,388,181,386,182,385,188,385,192,378,193,371,196,369,195,369,200,367,204,364,207,359,209,351,211,344,211,340,210,345,206,343,202,341,199,339,196,334,197,333,197,331,196,328,198,325,199,321,198,319,191,318,187,312,187,311,181,310,177,305,172,303,169,302,160,301,153,298,147,299,145,306,141,307,139" href="Petites-annonces-12-Ile-de-France.htm" />
-				<area alt="" onmouseover="MapReg(13); MapRegBulle('Lan. Roussillon', '<?php echo $cache_nombre_annonce['reg_13']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="376,474,375,467,373,462,370,459,369,456,377,439,377,441,384,436,388,435,391,441,396,444,398,442,400,441,404,443,411,449,413,454,414,464,417,471,421,477,427,481,430,484,437,478,439,481,440,478,446,480,451,483,453,486,454,492,455,496,460,501,459,504,453,510,450,512,450,519,449,525,445,523,443,527,441,530,441,532,436,534,434,536,431,542,428,541,425,536,420,535,413,540,407,545,401,550,397,554,394,556,389,555,383,560,379,563,376,570,373,575,373,605,375,611,380,614,377,614,371,612,363,615,358,617,355,620,353,623,345,623,340,619,336,618,330,616,326,617,322,621,320,619,317,615,312,613,308,612,310,606,315,603,320,602,320,599,327,598,323,592,316,593,316,588,315,586,318,585,319,582,318,579,318,577,318,573,318,567,314,565,308,562,306,557,306,555,308,551,313,546,315,547,320,545,325,547,329,548,334,543,340,543,347,544,350,543,353,540,353,528,357,530,363,527,369,525,374,523,374,515,378,515,382,514,385,511,388,508,392,502,384,497,386,494,387,491,382,488,376,485,375,480,376,474" href="Petites-annonces-13-Languedoc-Roussillon.htm" />
-				<area alt="" onmouseover="MapReg(14); MapRegBulle('Limousin', '<?php echo $cache_nombre_annonce['reg_14']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="261,376,263,371,266,367,269,365,270,362,268,359,265,356,265,349,265,345,268,341,273,338,275,336,277,335,280,334,281,333,286,334,291,334,292,336,296,334,304,334,308,331,312,329,321,332,328,331,336,331,336,337,342,340,344,344,347,349,348,355,349,362,349,364,346,367,341,371,340,374,344,381,346,385,344,389,344,398,344,407,339,403,336,408,332,414,330,418,331,421,330,423,329,426,327,428,326,432,324,434,317,434,312,436,309,438,303,430,299,430,294,431,290,426,288,422,286,422,284,417,284,414,284,411,286,407,287,404,284,399,278,399,279,395,276,391,271,388,263,389,262,384,259,383,256,380" href="Petites-annonces-14-Limousin.htm" />
-				<area alt="" onmouseover="MapReg(15); MapRegBulle('Lorraine', '<?php echo $cache_nombre_annonce['reg_15']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="488,106,494,106,498,112,504,114,506,111,511,109,524,113,527,118,530,124,533,129,539,132,541,127,546,128,550,133,555,132,560,132,566,129,572,132,576,138,574,142,572,144,569,145,560,143,558,141,552,139,551,137,548,144,545,149,550,150,551,154,551,156,556,154,561,156,562,160,559,164,560,168,558,173,554,175,555,182,554,187,557,191,556,195,554,201,552,206,550,210,548,216,547,224,542,227,534,220,530,221,526,220,523,217,518,218,514,219,508,213,502,219,500,221,498,219,495,218,494,214,490,209,491,200,489,198,478,190,478,187,475,184,462,176,459,171,457,165,453,160,452,157,456,151,459,147,457,145,456,142,456,136,455,131,458,126,459,120,460,116,459,110,460,105,465,104,468,104,472,103,474,105,478,111,484,110,485,106" href="Petites-annonces-15-Lorraine.htm" />
-				<area alt="" onmouseover="MapReg(16); MapRegBulle('Midi Pyrenées', '<?php echo $cache_nombre_annonce['reg_16']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="257,584,254,586,253,594,247,596,244,596,240,595,233,596,231,595,228,593,225,595,218,595,214,595,210,589,205,585,204,582,205,574,206,570,209,568,210,563,215,560,218,556,218,551,220,548,220,543,219,541,216,541,219,537,216,532,214,531,209,531,207,527,209,520,210,513,210,508,222,504,221,507,225,505,225,503,229,503,233,502,236,502,246,500,252,499,258,499,262,493,265,492,265,488,269,484,267,479,270,477,274,476,273,468,273,466,275,463,283,452,287,450,287,445,290,444,293,438,294,432,295,430,303,431,309,437,313,436,316,434,324,435,325,441,327,445,328,448,327,453,329,457,331,460,338,456,341,457,345,455,348,452,351,443,355,439,357,438,363,443,364,446,365,449,365,454,369,458,372,463,375,469,376,475,375,482,377,487,385,490,387,492,386,494,384,496,385,498,391,501,389,505,387,508,386,510,383,511,382,515,378,517,373,515,372,525,368,525,365,527,359,530,357,530,353,528,353,538,351,544,346,545,340,543,335,543,331,545,329,547,323,546,320,544,315,546,313,545,308,551,305,555,306,560,308,563,314,565,318,568,319,574,318,577,317,579,320,581,318,585,315,586,316,591,319,593,322,592,327,597,328,600,321,599,319,600,315,604,307,605,302,601,295,600,292,602,285,594,280,595,275,590,271,589,262,586" href="Petites-annonces-16-Midi-Pyrenees.htm" />
-				<area alt="" onmouseover="MapReg(17); MapRegBulle('Nord Pas de Calais', '<?php echo $cache_nombre_annonce['reg_17']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="305,16,309,10,314,9,328,5,342,2,348,2,351,8,349,12,349,18,355,21,357,25,362,28,366,23,372,22,377,24,377,31,380,38,382,41,385,41,387,40,389,43,392,43,395,46,397,52,397,54,401,53,406,53,411,52,415,56,420,59,419,64,419,66,422,70,418,78,420,80,412,87,410,88,404,80,398,82,391,83,383,80,373,84,368,77,363,76,350,71,340,72,340,67,330,65,323,63,318,56,303,55,304,52,305,50,303,49,304,40,308,42,305,38,304,26" href="Petites-annonces-17-Nord-Pas-de-Calais.htm" />
-				<area alt="" onmouseover="MapReg(18); MapRegBulle('Pays de la Loire', '<?php echo $cache_nombre_annonce['reg_18']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="136,262,131,263,127,263,123,264,119,268,115,265,111,264,109,259,112,254,119,250,132,247,133,241,138,237,143,236,151,235,153,232,163,229,168,228,170,232,175,221,179,218,182,216,181,202,181,196,183,190,182,180,192,180,194,185,198,183,201,185,205,181,217,182,220,178,223,182,225,186,227,188,228,191,232,191,243,185,246,187,248,195,254,199,258,201,259,201,264,205,268,207,267,212,266,214,267,219,267,227,264,230,260,235,256,237,256,241,250,245,245,246,244,249,239,247,237,254,233,263,231,273,229,277,225,282,221,284,218,282,217,282,208,283,202,285,197,288,190,288,185,290,188,296,191,299,194,304,195,312,197,319,198,327,199,332,196,335,192,337,190,337,186,335,181,335,181,332,176,334,171,335,169,336,168,339,164,334,161,334,155,332,154,328,150,328,142,320,140,316,138,309,133,304,129,299,127,293,129,289,135,283,129,277,125,275,127,272,128,266,131,264" href="Petites-annonces-18-Pays-de-la-Loire.htm" />
-				<area alt="" onmouseover="MapReg(19); MapRegBulle('Picardie', '<?php echo $cache_nombre_annonce['reg_19']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="297,69,303,63,305,64,303,56,311,56,320,59,323,64,329,66,341,67,340,71,344,73,353,73,368,77,373,83,382,80,390,82,402,81,411,87,420,81,422,81,421,88,421,92,421,95,418,100,417,102,413,103,413,116,412,122,408,121,401,123,396,127,399,136,397,139,394,140,394,145,396,148,390,158,379,153,374,146,373,142,371,139,362,143,358,141,357,144,344,142,336,136,333,137,322,135,316,137,310,137,308,134,312,130,310,121,308,115,311,107,309,103,310,96,312,92,302,80,297,74,296,72" href="Petites-annonces-19-Picardie.htm" />
-				<area alt="" onmouseover="MapReg(20); MapRegBulle('Poitou Charentes', '<?php echo $cache_nombre_annonce['reg_20']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="176,385,168,380,166,377,166,373,172,369,173,363,174,359,173,357,174,357,172,350,169,347,173,338,173,335,183,333,181,335,187,336,189,337,195,334,201,332,198,328,198,322,197,314,194,303,192,299,189,294,187,289,198,289,202,283,213,281,223,280,223,284,232,278,236,282,237,285,240,285,240,291,245,294,253,293,255,289,260,293,262,299,268,306,271,314,270,318,276,323,279,325,284,333,281,336,276,336,273,340,266,343,264,347,264,354,266,358,269,361,268,366,264,372,260,377,256,380,251,385,248,388,245,393,241,398,236,402,237,408,235,410,233,414,229,415,224,417,220,423,210,423,204,414,201,409,198,409,194,405,190,405,184,394" href="Petites-annonces-20-Poitou-Charentes.htm" />
-				<area alt="" onmouseover="MapReg(21); MapRegBulle('Pro. Al. Cote Azur', '<?php echo $cache_nombre_annonce['reg_21']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="516,441,528,438,531,438,531,431,528,429,526,425,526,421,527,419,534,423,538,420,546,420,547,425,552,426,552,434,556,436,561,437,564,437,569,446,568,449,564,448,562,453,561,457,559,460,562,464,562,468,560,471,566,480,568,481,575,483,582,486,586,487,597,483,601,487,603,489,601,495,598,500,594,505,594,510,592,514,581,517,576,522,576,526,571,529,568,532,564,538,559,539,554,544,552,549,555,550,554,555,553,557,549,556,547,558,544,560,540,560,539,562,538,563,532,562,529,567,528,568,522,563,516,564,511,565,509,560,507,559,503,558,494,558,490,556,485,546,480,547,472,547,470,547,467,543,465,541,463,544,465,547,458,548,451,548,450,547,449,544,448,542,442,541,434,541,432,540,437,534,441,532,443,527,446,524,449,524,453,511,459,504,460,502,456,494,454,489,452,484,451,480,458,479,462,484,470,480,473,481,477,479,477,485,486,486,488,491,493,493,499,486,501,487,502,482,497,478,491,474,489,471,493,467,499,466,499,464,497,462,499,456,503,454,506,453,508,446,512,445,513,444" href="Petites-annonces-21-Provence-Alpes-Cote-Azur.htm" />
-				<area alt="" onmouseover="MapReg(22); MapRegBulle('Rhone Alpes', '<?php echo $cache_nombre_annonce['reg_22']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="556,350,559,356,561,359,561,362,554,367,552,373,553,377,559,380,563,383,561,388,565,394,572,396,568,402,569,406,568,408,562,412,554,415,548,418,543,420,539,421,535,424,527,419,526,425,528,430,532,432,532,437,531,438,523,439,514,442,512,445,507,446,506,452,502,456,499,455,496,461,499,466,496,468,492,466,490,471,492,476,501,481,501,487,498,486,495,491,491,492,487,490,487,486,477,485,474,479,473,481,471,480,463,483,458,482,455,480,451,479,449,482,444,478,440,479,438,482,439,478,434,481,431,482,428,483,423,476,417,468,414,461,412,451,415,446,425,441,430,434,434,432,434,428,437,423,440,421,440,413,437,412,434,412,435,407,432,405,427,405,420,408,417,407,415,405,412,405,415,399,412,391,411,387,406,382,404,377,404,372,404,369,402,365,405,361,407,359,407,351,406,345,409,342,413,347,417,348,425,346,429,349,434,344,436,340,439,341,442,339,445,341,447,339,453,348,460,323,464,324,469,324,474,323,479,329,481,334,484,336,486,339,489,338,493,335,498,338,499,340,504,336,508,334,510,332,514,329,518,331,517,335,516,338,514,340,509,343,511,348,517,347,522,343,524,341,523,338,525,333,527,331,532,331,538,327,546,326,548,330,550,333,552,338,551,342,549,345,555,350" href="Petites-annonces-22-Rhone-Alpes.htm" />
-				<area alt="" onmouseover="MapReg(23); MapRegBulle('Guadeloupe', '<?php echo $cache_nombre_annonce['reg_23']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="16,602,23,604,29,606,32,611,36,612,38,610,41,607,40,603,44,602,45,599,42,597,40,591,42,586,48,582,54,587,56,592,57,601,60,603,65,605,69,606,72,608,75,611,80,615,73,615,67,616,61,617,55,619,50,620,44,620,39,616,35,617,35,622,36,627,38,637,66,650,68,646,71,643,77,647,80,652,78,656,76,659,73,662,67,661,64,655,65,650,37,637,37,642,33,645,30,647,26,650,21,650,16,641,14,636,13,624,11,617,10,611" href="Petites-annonces-23-Guadeloupe.htm" />
-				<area alt="" onmouseover="MapReg(24); MapRegBulle('Martinique', '<?php echo $cache_nombre_annonce['reg_24']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="11,484,15,481,23,482,29,486,35,491,41,496,47,502,49,501,58,497,56,500,56,503,54,504,50,501,49,503,50,506,55,508,53,511,49,513,51,517,56,515,55,519,58,520,61,523,62,530,66,540,67,544,64,553,61,555,56,552,56,548,59,545,55,547,53,545,50,546,45,544,40,542,38,542,35,546,30,547,27,542,26,538,30,532,33,531,38,535,41,532,37,527,36,524,33,524,26,522,21,518,15,512,14,505,15,500,10,496,8,492" href="Petites-annonces-24-Martinique.htm" />
-				<area alt="" onmouseover="MapReg(25); MapRegBulle('Guyane', '<?php echo $cache_nombre_annonce['reg_25']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="15,361,20,362,32,366,42,367,46,372,52,379,56,382,62,386,65,388,64,392,63,395,67,392,67,387,72,396,72,401,71,406,68,411,63,418,58,423,57,427,57,431,53,438,51,443,48,448,45,451,41,451,38,449,34,450,33,448,23,448,20,448,16,450,13,453,4,449,10,435,11,427,14,418,15,415,6,404,5,397,4,391,3,383,5,375,12,369,16,366" href="Petites-annonces-25-Guyane.htm" />
-				<area alt="" onmouseover="MapReg(26); MapRegBulle('Réunion', '<?php echo $cache_nombre_annonce['reg_26']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="24,268,30,268,42,270,50,272,53,273,57,279,57,282,59,286,63,291,65,294,70,297,74,300,74,305,72,308,70,313,70,316,71,322,70,328,65,330,60,329,52,332,48,332,42,331,37,328,31,325,27,323,24,323,21,320,17,319,16,318,15,316,11,314,10,310,9,302,6,298,4,294,4,289,8,286,10,280,11,275,14,275" href="Petites-annonces-26-Reunion.htm" />
-			</map>
-			<img usemap="#FranceMap" src="images/map/map_blank.png" width="621" height="680" alt="" />
-		</p>
+			<p id="map_region">
+				<map name="FranceMap" id="france">
+					<area alt="" onmouseover="MapReg(1); MapRegBulle('Alsace', '<?php echo $cache_nombre_annonce['reg_1']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="320,77,334,79,325,95,325,105,321,112,322,118,321,138,315,140,314,140,304,125,304,120,308,117,308,111,311,106,308,101,313,88,304,83,305,80,307,78,319,81,319,80" href="Petites-annonces-1-Alsace.htm" />
+					<area alt="" onmouseover="MapReg(2); MapRegBulle('Aquitaine', '<?php echo $cache_nombre_annonce['reg_2']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="148,266,149,271,141,278,118,283,115,295,120,298,123,306,106,326,86,313,82,315,82,314,85,308,75,304,75,303,76,303,92,253,96,253,92,248,97,219,105,231,109,227,109,228,124,236,124,234,125,234,124,232,130,230,143,212,144,212,147,218,154,219,157,223,158,224,158,233,163,245,159,253,151,266" href="Petites-annonces-2-Aquitaine.htm" />
+					<area alt="" onmouseover="MapReg(3); MapRegBulle('Auvergne', '<?php echo $cache_nombre_annonce['reg_3']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="193,226,190,207,195,201,193,201,194,195,187,183,194,175,205,171,222,173,231,187,223,204,231,219,229,227,241,226,244,233,228,250,223,245,219,247,216,242,214,242,208,248,204,253,199,243,198,243,198,244,191,254,182,255,182,254,182,237" href="Petites-annonces-3-Auvergne.htm" />
+					<area alt="" onmouseover="MapReg(4); MapRegBulle('Basse Normandie', '<?php echo $cache_nombre_annonce['reg_4'] ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="99,54,100,66,127,71,137,66,139,87,143,87,152,107,149,108,147,114,138,109,137,103,127,106,123,99,100,99,93,101,90,97,95,94,95,93,91,93,89,86,90,70,85,66,84,53,86,53" href="Petites-annonces-4-Basse-Normandie.htm" />
+					<area alt="" onmouseover="MapReg(5); MapRegBulle('Bourgogne', '<?php echo $cache_nombre_annonce['reg_5']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="268,137,270,147,263,163,268,166,267,182,265,182,255,180,252,192,242,189,239,193,231,194,229,190,232,183,222,172,209,174,207,160,202,150,202,133,208,125,208,124,204,117,206,109,217,108,221,117,225,118,227,125,235,125,249,121,254,128,255,133" href="Petites-annonces-5-Bourgogne.htm" />
+					<area alt="" onmouseover="MapReg(6); MapRegBulle('Bretagne', '<?php echo $cache_nombre_annonce['reg_6']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="82,96,91,97,92,102,101,100,102,109,102,120,94,128,90,127,90,129,86,129,85,132,74,133,72,138,57,138,57,133,51,131,52,134,47,135,42,126,42,125,41,125,39,128,39,127,37,124,23,120,23,117,23,118,20,124,17,123,10,112,19,111,20,108,15,104,20,104,23,106,23,105,21,101,18,100,19,99,17,99,9,100,8,95,9,93,18,89,29,88,30,92,39,91,39,87,41,86,51,85,51,88,53,86,61,99,68,93,77,96,79,99,80,99,80,97,79,94,81,93,81,92,82,92" href="Petites-annonces-6-Bretagne.htm" />
+					<area alt="" onmouseover="MapReg(7); MapRegBulle('Centre', '<?php echo $cache_nombre_annonce['reg_7']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="177,105,179,112,189,110,192,116,190,118,199,118,204,117,207,125,201,135,204,136,202,147,206,168,193,176,194,176,194,175,195,177,194,180,186,184,158,187,141,161,135,164,129,153,133,138,137,139,150,121,148,121,150,119,148,110,153,101,149,96,166,86,167,86" href="Petites-annonces-7-Centre.htm" />
+					<area alt="" onmouseover="MapReg(8); MapRegBulle('Champ. Ardenne', '<?php echo $cache_nombre_annonce['reg_8']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="250,51,254,51,261,59,259,59,257,59,253,81,255,84,252,90,255,97,266,107,273,115,278,125,273,133,264,138,256,133,254,131,255,128,245,120,229,124,214,105,215,91,220,71,223,70,230,58,235,45,241,45,250,37,250,38" href="Petites-annonces-8-Champagne-Ardenne.htm" />
+					<area alt="" onmouseover="MapReg(9); MapRegBulle('Corse', '<?php echo $cache_nombre_annonce['reg_9']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="337,301,340,301,340,303,338,361,336,361,326,353,329,350,324,349,324,341,320,341,323,336,318,330,321,327,317,324,320,317,334,309,337,310" href="Petites-annonces-9-Corse.htm" />
+					<area alt="" onmouseover="MapReg(10); MapRegBulle('Franche Comté', '<?php echo $cache_nombre_annonce['reg_10']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="283,120,293,124,298,123,307,129,310,138,306,144,307,149,279,189,274,187,271,188,268,186,269,173,267,169,269,165,263,161,270,149,270,134,273,133,274,128" href="Petites-annonces-10-Franche-Comte.htm" />
+					<area alt="" onmouseover="MapReg(11); MapRegBulle('Haute Normandie', '<?php echo $cache_nombre_annonce['reg_11']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="140,86,137,65,132,61,137,53,166,42,172,49,173,72,165,81,162,92,148,95" href="Petites-annonces-11-Haute-Normandie.htm" />
+					<area alt="" onmouseover="MapReg(12); MapRegBulle('Ile de France', '<?php echo $cache_nombre_annonce['reg_12']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="208,79,208,83,216,89,214,92,215,92,215,91,216,93,217,100,216,100,214,106,205,109,203,115,192,117,186,109,179,111,178,107,173,104,174,100,169,96,169,88,166,81,173,76,188,76,196,81" href="Petites-annonces-12-Ile-de-France.htm" />
+					<area alt="" onmouseover="MapReg(13); MapRegBulle('Lan. Roussillon', '<?php echo $cache_nombre_annonce['reg_13']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="208,293,208,288,212,288,218,279,215,275,215,272,212,271,206,250,216,243,216,244,218,247,224,247,235,267,248,267,255,280,240,300,240,301,239,300,237,297,224,304,221,309,215,309,208,318,210,342,198,343,197,346,189,343,178,345,172,338,183,332,180,329,176,331,176,326,177,317,171,311,170,309,171,309,174,304,196,303,196,302,198,295,198,294,203,292" href="Petites-annonces-13-Languedoc-Roussillon.htm" />
+					<area alt="" onmouseover="MapReg(14); MapRegBulle('Limousin', '<?php echo $cache_nombre_annonce['reg_14']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="192,225,188,225,184,231,174,242,169,239,164,239,159,233,160,226,157,224,154,217,143,211,151,201,148,193,150,189,173,184,185,185,194,195,194,204,189,210" href="Petites-annonces-14-Limousin.htm" />
+					<area alt="" onmouseover="MapReg(15); MapRegBulle('Lorraine', '<?php echo $cache_nombre_annonce['reg_15']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="262,58,265,62,274,60,277,63,284,61,292,63,299,74,303,72,306,75,316,73,320,76,320,80,318,80,306,78,304,84,306,83,308,87,312,92,310,96,307,98,308,105,310,109,303,126,287,121,285,122,283,120,276,122,273,115,274,112,253,91,253,72,257,66,257,59" href="Petites-annonces-15-Lorraine.htm" />
+					<area alt="" onmouseover="MapReg(16); MapRegBulle('Midi Pyrenées', '<?php echo $cache_nombre_annonce['reg_16']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="164,240,172,244,180,242,183,247,186,256,192,255,198,244,199,244,199,245,209,262,209,270,215,275,213,277,214,277,217,281,215,285,207,287,207,292,196,294,197,302,195,302,174,304,169,309,172,313,176,317,175,330,181,333,174,337,166,333,162,334,141,325,141,326,140,326,140,330,129,331,120,331,114,319,123,301,121,296,116,292,120,283,125,283,129,279,135,280,136,278,143,278,150,266,153,266,177,321,178,323,177,323" href="Petites-annonces-16-Midi-Pyrenees.htm" />
+					<area alt="" onmouseover="MapReg(17); MapRegBulle('Nord Pas de Calais', '<?php echo $cache_nombre_annonce['reg_17']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="188,2,193,2,193,3,194,3,195,11,200,16,208,13,212,23,221,31,230,30,233,33,229,49,226,48,224,44,224,45,225,45,223,46,213,44,206,47,205,44,190,41,189,37,170,30,170,23,172,24,170,9" href="Petites-annonces-17-Nord-Pas-de-Calais.htm" />
+					<area alt="" onmouseover="MapReg(18); MapRegBulle('Pays de la Loire', '<?php echo $cache_nombre_annonce['reg_18']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="102,101,109,104,123,101,130,107,136,104,139,110,150,116,147,131,133,137,125,157,113,157,111,160,110,160,103,162,110,185,100,185,93,187,71,163,76,157,71,150,76,147,76,146,63,147,62,145,62,143,74,138,76,132,85,132,89,127,96,128,102,118" href="Petites-annonces-18-Pays-de-la-Loire.htm" />
+					<area alt="" onmouseover="MapReg(19); MapRegBulle('Picardie', '<?php echo $cache_nombre_annonce['reg_19']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="189,38,189,41,209,48,225,46,228,50,234,45,234,54,229,68,221,69,220,72,222,78,219,78,217,87,217,88,204,78,189,76,173,76,174,51,172,51,173,48,165,40,177,32,182,37" href="Petites-annonces-19-Picardie.htm" />
+					<area alt="" onmouseover="MapReg(20); MapRegBulle('Poitou Charentes', '<?php echo $cache_nombre_annonce['reg_20']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="128,155,134,163,144,164,151,179,156,183,156,186,148,193,147,200,150,202,123,235,117,236,113,228,107,226,93,210,98,200,97,188,112,184,108,167,104,163,105,162,112,161,117,157,125,159" href="Petites-annonces-20-Poitou-Charentes.htm" />
+					<area alt="" onmouseover="MapReg(21); MapRegBulle('Pro. Al. Cote Azur', '<?php echo $cache_nombre_annonce['reg_21']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="308,309,295,315,273,310,267,304,264,305,258,302,257,305,249,301,242,301,241,301,241,299,246,297,257,279,251,267,256,270,265,268,269,271,275,273,279,267,273,261,277,259,277,261,277,260,278,258,276,255,296,244,296,240,292,237,295,234,301,233,302,233,302,234,307,242,314,246,316,249,312,264,325,272,333,270,335,272,329,285,307,304" href="Petites-annonces-21-Provence-Alpes-Cote-Azur.htm" />
+					<area alt="" onmouseover="MapReg(22); MapRegBulle('Rhone Alpes', '<?php echo $cache_nombre_annonce['reg_22']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="277,253,277,260,272,264,279,268,278,270,274,274,265,270,265,267,233,265,229,251,245,230,241,226,237,225,232,227,231,219,225,214,227,191,239,194,244,190,251,190,251,193,253,193,258,181,264,181,270,188,276,187,281,189,286,183,288,186,283,194,289,194,292,185,305,183,305,192,311,201,306,207,316,227,299,235,293,234,292,237,296,243,280,253" href="Petites-annonces-22-Rhone-Alpes.htm" />
+					<area alt="" onmouseover="MapReg(23); MapRegBulle('Guadeloupe', '<?php echo $cache_nombre_annonce['reg_23']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="20,343,22,356,11,359,10,356,6,339,9,335,11,336,20,340,26,333,24,327,26,325,28,326,31,327,32,335,42,340,42,342,30,345,39,359,45,363,45,365,38,368,36,365,37,363" href="Petites-annonces-23-Guadeloupe.htm" />
+					<area alt="" onmouseover="MapReg(24); MapRegBulle('Martinique', '<?php echo $cache_nombre_annonce['reg_24']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="9,268,30,284,29,287,37,306,34,306,17,303,16,298,24,295,6,270,31,278,32,281,30,281" href="Petites-annonces-24-Martinique.htm" />
+					<area alt="" onmouseover="MapReg(25); MapRegBulle('Guyane', '<?php echo $cache_nombre_annonce['reg_25']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="9,202,40,219,41,224,24,250,12,249,7,251,3,249,9,230,2,212,37,218,36,220" href="Petites-annonces-25-Guyane.htm" />
+					<area alt="" onmouseover="MapReg(26); MapRegBulle('Réunion', '<?php echo $cache_nombre_annonce['reg_26']; ?>', '<?php echo $language['texte_ann_bulle'] ?>', event)" onmouseout="MapRegSup();" shape="poly" coords="39,182,2,162,6,154,12,150,29,152,41,171" href="Petites-annonces-26-Reunion.htm" />
+				</map>
+				<img usemap="#FranceMap" src="images/map/map_blank.png" width="621" height="680" alt="" />
+			</p>
+		</div>
+		<div class="clear"></div>
+		<ul>
+			<li>Alsace</li>
+			<li>Aquitaine</li>
+			<li>Auvergne</li>
+			<li>Basse-Normandie</li>
+			<li>Bourgogne</li>
+			<li>Bretagne</li>
+			<li>Centre</li>
+			<li>Champagne-Ardenne</li>
+			<li>Corse</li>
+			<li>Franche-Comté</li>
+			<li>Haute-Normandie</li>
+			<li>lle-de-France</li>
+			<li>Languedoc-Roussillon</li>
+		</ul>
+		
+		<ul>
+			<li>Limousin</li>
+			<li>Lorraine</li>
+			<li>Midi-Pyrénées</li>
+			<li>Nord-Pas-de-Calais</li>
+			<li>Pays-de-la-Loire</li>
+			<li>Picardie</li>
+			<li>Poitou-Charentes</li>
+			<li>Provence-Alpes-Cote-Azur</li>
+			<li>Rhône-Alpes</li>
+			<li></li>
+			<li>Guadeloupe</li>
+			<li>Martinique</li>
+			<li>Guyane</li>
+			<li>Réunion</li>
+		</ul>
 		
 	</div>
 	
-	<div id="corps_recherche">
+	
+	<!--<div id="corps_recherche">
 	<form method="get" action="ann_search.php">
 	
 	<div id="top_menu_recherche"></div>
@@ -721,10 +942,727 @@ function display_index_center()
 	<div id="bottom_menu_recherche"></div>
 
 	</form>
+	</div>-->
+	
+	<div class="produitCont">
+		<ul>
+			<li>
+				<a href="#"><img src="img/illus-cat-1.jpg" width="75" height="58" />
+				<span>Lorem ipsum</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-2.jpg" width="75" height="58" />
+				<span>Buffet</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-3.jpg" width="75" height="58" />
+				<span>Lorem ipsum dolores lorem</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-4.jpg" width="75" height="58" />
+				<span>Lorem ipsum</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="#"><img src="img/illus-cat-1.jpg" width="75" height="58" />
+				<span>Lorem ipsum</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-2.jpg" width="75" height="58" />
+				<span>Buffet</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-3.jpg" width="75" height="58" />
+				<span>Lorem ipsum dolores lorem</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-4.jpg" width="75" height="58" />
+				<span>Lorem ipsum</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="#"><img src="img/illus-cat-1.jpg" width="75" height="58" />
+				<span>Lorem ipsum</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-2.jpg" width="75" height="58" />
+				<span>Buffet</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-3.jpg" width="75" height="58" />
+				<span>Lorem ipsum dolores lorem</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-4.jpg" width="75" height="58" />
+				<span>Lorem ipsum</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="#"><img src="img/illus-cat-1.jpg" width="75" height="58" />
+				<span>Lorem ipsum</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-2.jpg" width="75" height="58" />
+				<span>Buffet</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-3.jpg" width="75" height="58" />
+				<span>Lorem ipsum dolores lorem</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="img/illus-cat-4.jpg" width="75" height="58" />
+				<span>Lorem ipsum</span><span class="onglet"></span></a>
+				<div class="layer">
+					<ul>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Appliances</a></li>
+								<li><a href="#">Audio &amp; Stereo</a></li>
+								<li><a href="#">Baby &amp; Kids Stuff</a></li>
+								<li><a href="#">Cameras, Camcorders
+								&amp; Studio Equipment</a></li>
+								<li><a href="#">Christmas Decorations</a></li>
+								<li><a href="#">Clothes, Footwear &amp;
+								Accessories</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
 	</div>
+	
+</div>
+</div>
 
-</div>
-</div>
+<div class="clear"></div>
 
 <?php
 }
@@ -818,61 +1756,41 @@ function htm_footer()
 	global $language, $cache_pages, $param_gen;
 ?>
 
-<div id="bloc_footer_1">
-<div id="bloc_footer_2">
-
-	<div id="left_footer">
-		<p id="p_footer_left">
-			<?php echo $language['texte_copyright'] .' <a class="lien_foot" href="'. URL .'">'. $param_gen['name'] .'</a> '. $language['texte_creation']; ?>
-		</p>
-	</div>
+<div id="foot-nav">
 	
-	<div id="right_footer">
-		<p id="p_footer_right">
-			
-			<?php
-			
-			foreach($cache_pages as $v)
-			{
-				$id_page = (int) $v['id_page'];
-				$titre = htmlspecialchars($v['titre'], ENT_QUOTES);
-				
-				// Url rewriting
-			 
-				$accent = array('à', 'á', 'â', 'ã', 'ä', 'å', 'À', 'Á', 'Â', 'Ã', 'Ä', 'Å', 'ç', 'Ç', 'é', 'è', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'ì', 'í', 'î', 'ï', 'Ì', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'õ', 'ö', 'Ò', 'Ó', 'Ô', 'Õ', 'Ö', 'ù', 'ú', 'û', 'ü', 'Ú', 'Ù', 'Û', 'Ü', 'Ý', 'ý', 'ÿ', 'ñ');
-				$sans_accent = array('a', 'a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A', 'A', 'A', 'c', 'C', 'e', 'e', 'e', 'e', 'E', 'E', 'E', 'E', 'i', 'i', 'i', 'i', 'I', 'I', 'I', 'I', 'o', 'o', 'o', 'o', 'o', 'O', 'O', 'O', 'O', 'O', 'u', 'u', 'u', 'u', 'U', 'U', 'U', 'U', 'y', 'y', 'y', 'n');      
-				
-				$url_page = $titre;
-				$url_page = str_replace($accent, $sans_accent, $url_page);
-				
-				$url = array();
-			 
-				for ($i = 0; $i < strlen($url_page); $i++) 
-				array_push($url, $url_page[$i]);
-				
-				$url_aff = '';
-				
-				foreach($url as $url_page)
-				{
-					if(preg_match('#^[a-zA-Z0-9]$#', $url_page) != true)
-					$url_page = str_replace($url_page, '-', $url_page);
-					
-					$url_aff .= $url_page;
-				} 
-				
-				echo '<a href="Page-'. $id_page .'-'. $url_aff .'.htm">'. $titre .'</a> - ';
-			}
-			
-			?>
-			
-			<a href="contact.htm"><?php echo $language['lien_contact']; ?></a>
-		</p>
+	<p><strong>Categories:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a ligula ac mauris consequat auctor. Curabitur volutpat pellentesque mi, ac cursus mauris scelerisque nec. Nam mollis vestibulum lectus ac fermentum.</p>
+	<div class="blkCont">
+		<p>Infos légales Qui sommes-nous ? Contact Leboncoin recrute ! Publicité Professionnels de l'immobilier Mobile Règles de diffusions Conditions Générales de Vente Ajouter à mes favoris Plan du site Vos cookies Partenaire : Prêt d'Union</p>
+		<div class="shareLinks">
+			<img src="img/titre-share.png" width="95" height="44" />
+			<ul>
+				<li><a href="#" class="linkFbook">Facebook</a></li>
+				<li><a href="#" class="linkTwitter">Twitter</a></li>
+				<li><a href="#" class="linkGgplus">Facebook</a></li>
+				<li><a href="#" class="linkPinterest">linkPinterest</a></li>
+			</ul>
+		</div>
 	</div>
-	
-</div>
-</div>
-
-</div>
+	<div class="foot">
+		<img src="img/logo-foot.png" width="206" height="41" alt="Megadeals" />
+		<ul>
+			<li>
+				<ul>
+					<li><a href="#">Help & Contact</a></li>
+					<li><a href="#">My mega.deals</a></li>
+					<li><a href="#">About mega.deals</a></li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li><a href="#">Help & Contact</a></li>
+					<li><a href="#">My mega.deals</a></li>
+					<li><a href="#">About mega.deals</a></li>
+				</ul>
+			</li>
+		</ul>
+		<img class="ggPlay" src="img/google-play.png" width="167" height="55" />
+	</div>
 </div>
 
 <script type="text/javascript" src="js/functions_js.js"></script>
