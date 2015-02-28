@@ -3863,6 +3863,211 @@ function display_text_no($texte)
 <?php
 }
 
+/// ----- PAGE ANNONCE ------ ///
+
+function display_annonce_create($membre) 
+{
+	global $language, $param_gen, $cache_options_visuelles, $cache_publicites, $cache_champs, $cache_categories;
+	
+	?>
+	
+	<div id="global-div">
+		<form action="#" method="post" class="formulaire frmAnnonce">
+		<h2>Déposer mon annonce</h2>
+		<fieldset>
+			
+			<div>
+				<label for="selCat">Choose category<em>*</em></label>	
+				<select id="selCat" name="selCat">
+					<option value="0">Select category</option>
+					<option value="1">Category 1</option>
+					<option value="2">Category 2</option>
+					<option value="3">Category 3</option>
+				</select>
+			</div>
+			<div>
+				<label for="selReg">Region<em>*</em></label>	
+				<select id="selReg" name="selReg">
+					<option value="0">Select region</option>
+					<option value="1">Region 1</option>
+					<option value="2">Region 2</option>
+					<option value="3">Region 3</option>
+				</select>
+			</div>
+			<div>
+				<label for="codePos">Postcode<em>*</em></label>	
+				<input type="text" id="codePos" name="codePos" />
+			</div>
+			<div>
+				<span class="label">You are<em>*</em></span>
+				<div class="radioCont">
+					<input type="radio" id="opt_1" name="optionRad"/>
+					<label for="opt_1">
+						<span>Particular  / <strong>Professionals</strong> you must create a Pro account</span>
+						<span><strong>Particulars</strong> for an easy ad management, you can create a Member account</span>
+					</label>
+				</div>
+			</div>
+			<div>
+				<span class="label">Add type<em>*</em></span>
+				<div class="radioCont radioContType">
+					<input type="radio" id="opt_2" name="optionRad_1"/>
+					<label for="opt_2">Offered </label>
+					<input type="radio" id="opt_3" name="optionRad_1"/>
+					<label for="opt_3">Wanted  </label>
+					<input type="radio" id="opt_4" name="optionRad_1"/>
+					<label for="opt_4">Swap </label>
+					<input type="radio" id="opt_5" name="optionRad_1"/>
+					<label for="opt_5">Donation </label>
+				</div>
+			</div>
+			<div>
+				<label for="city">City<em>*</em></label>	
+				<input type="text" id="city" name="codePos" />
+			</div>
+			<div>
+				<label for="title">Title<em>*</em></label>	
+				<input type="text" id="title" name="title" value="Lorem ipsum dolores" />
+				<div class="descGris">max 80 characters</div>
+			</div>
+			<div>
+				<label for="descp">Title<em>*</em></label>	
+				<textarea id="descp" name="descp" rows="0" cols="0">Lorem ipsum dolores</textarea>
+				<div class="descGris">max 3780 characters</div>
+			</div>
+			<div>
+				<label for="addPhoto">Add photos<em>*</em></label>	
+				<input type="file" name="addPhoto" id="addPhoto" />
+				<div class="desc"> ( GIF, JPG, JPEG or PNG)</div>
+				<div class="uploadPic">
+					<ul>
+						<li><a href="#">Upload photo</a></li>
+						<li><a href="#">Upload photo</a></li>
+						<li><a href="#">Upload photo</a></li>
+						<li><a href="#">Upload photo</a></li>
+						<li><a href="#">Upload photo</a></li>
+						<li><a href="#">Upload photo</a></li>
+						<li><a href="#">Upload photo</a></li>
+						<li><a href="#">Upload photo</a></li>
+						<li><a href="#">Upload photo</a></li>	
+					</ul>
+					<div class="desc">You can upload 10 picture(s) FOR FREE<br />Depending on your picture's size, the upload may take several minutes.</div>
+				</div>
+			</div>
+			<div>
+				<label for="youtubeVid">Youtube video</label>	
+				<input type="text" id="youtubeVid" name="youtubeVid" />
+				<span class="infDe">(Optional)</span>
+			</div>
+			<div>
+				<label for="dailyVid">Dailymotion video</label>	
+				<input type="text" id="dailyVid" name="dailyVid" />
+				<span class="infDe">(Optional)</span>
+			</div>
+			<div class="sepDiv">
+				<label for="name">Your name<em>*</em></label>	
+				<input type="text" id="name" name="name" />
+			</div>
+			<div>
+				<label for="email">Your email<em>*</em></label>	
+				<input type="text" id="email" name="email" />
+			</div>
+			<div>
+				<label for="phoneNum">Phone number</label>	
+				<input type="text" id="phoneNum" name="phoneNum" />
+				<div class="hidePhoneNum">
+					<input type="checkbox" />
+					<span>Hide my phone number on the ad </span>
+				</div>
+			</div>
+			<div>
+				<label for="price">Price<em>*</em></label>	
+				<input type="text" id="price" name="price" />
+			</div>
+			<div>
+				<label for="pass">Password</label>	
+				<input type="text" id="pass" name="pass" />
+			</div>
+			<div>
+				<label for="confPass">Confirm password</label>	
+				<input type="text" id="confPass" name="confPass" />
+			</div>
+			<div class="listOption">
+				<strong>OPTION <em>"TOP OF THE LIST AD"</em></strong>
+				<div>
+					<input type="radio" name="option_1" />
+					<label>No top of the list option  </label>
+				</div>
+				<div>
+					<input type="radio" name="option_1" />
+					<label>My ad bumps up to <strong>top of the list</strong> everyday during : 7 Days(s) : 5,00 €</label>
+				</div>
+				<div>
+					<input type="radio" name="option_1" />
+					<label>My ad bumps up to <strong>top of the list</strong> everyday during : 15 Days(s) : 9,00 €</label>
+				</div>
+			</div>
+			<div class="listOption listOption_2">
+				<strong>OPTION <em>"PREMIUM"</em></strong>
+				<div>
+					<input type="radio" name="option_2" />
+					<label>No premium option</label>
+				</div>
+				<div>
+					<input type="radio" name="option_2" />
+					<label>My ad bumps up to <strong>top of the list</strong> everyday during : 7 Days(s) : 5,00 €</label>
+				</div>
+				<div>
+					<input type="radio" name="option_2" />
+					<label>My ad bumps up to <strong>top of the list</strong> everyday during : 15 Days(s) : 9,00 €</label>
+				</div>
+			</div>
+			<div class="listOption listOption_3">
+				<strong>OPTION <em>"URGENT LOGO"</em></strong>
+				<div>
+					<input type="radio" name="option_3" />
+					<label>No urgent logo option</label>
+				</div>
+				<div>
+					<input type="radio" name="option_3" />
+					<label><strong>Urgent logo</strong> on my ad during : 7 Days(s) : 3,00 €</label>
+				</div>
+				<div>
+					<input type="radio" name="option_3" />
+					<label><strong>Urgent logo</strong> on my ad during : 15 Days(s) : 5,00 €</label>
+				</div>
+			</div>
+			<div class="listOption listOption_4">
+				<strong>OPTION <em>"FEATURED ADS"</em></strong>
+				<div>
+					<input type="radio" name="option_4" />
+					<label>No featured ad option </label>
+				</div>
+				<div>
+					<input type="radio" name="option_4" />
+					<label><strong>My Featured</strong> ad during : 7 Days(s) : 3,50 €</label>
+				</div>
+				<div>
+					<input type="radio" name="option_4" />
+					<label><strong>My Featured</strong> ad during : 15 Days(s) : 6 €</label>
+				</div>
+			</div>
+			<div class="btnCont">
+				<input type="submit" value="Valider!" />
+				<a href="#">Preview</a>
+			</div>
+		</fieldset>
+	</form>
+	</div>
+	<script type="text/javascript">
+	$(function() {
+		$('.searchFrm').hide();
+	})
+	</script>
+	
+	<?php
+}
+
 /// ----- PAGE D'UNE ANNONCE -----  ///	
 
 function display_annonce($id, $row, $images, $opts, $champs, $membre)

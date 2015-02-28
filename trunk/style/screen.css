@@ -408,3 +408,8 @@ input, select, textarea{
 	font-size: 12px;
 	padding-left: 30px;
 }
+
+#global-div {
+	margin: auto;
+	width: 865px;
+}

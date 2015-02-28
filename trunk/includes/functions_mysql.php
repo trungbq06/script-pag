@@ -1248,7 +1248,7 @@ function get_annonce($id)
 	
 	$req->bindValue('id_ann', $id, PDO::PARAM_INT);
 	$req->execute();
-	
+	print_r($req);die();
 	$result = result_to_array($req);
 	
 	if(empty($result))
