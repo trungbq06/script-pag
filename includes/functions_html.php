@@ -5769,7 +5769,11 @@ form.searchFrm {display: none;}
 	                <input type="submit" value="Valider" />
 
 	                <?php if($param_gen['active_fb'] == '1') : ?>
-	                <p><img src="img/btn-facebook-1.png" width="181" height="32" /></p>
+	                <p>
+	                	<a href="fb_connect.php?type=<?php echo $type; ?>">
+	                		<img src="img/btn-facebook-1.png" width="181" height="32" />
+	                	</a>
+	                </p>
 	                <?php endif;?>
 	                
 	                <p>
