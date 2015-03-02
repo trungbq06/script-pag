@@ -247,86 +247,86 @@ function htm_header_acc($title, $description, $words)
 </div>
 
 <?php
-/*
-$image = '';
-$url = '';
+	/*
+	$image = '';
+	$url = '';
 
-foreach($cache_publicites as $v)
-{
-	if($v['type'] == 4)
+	foreach($cache_publicites as $v)
 	{
-		$image = stripslashes(htmlspecialchars($v['image'], ENT_QUOTES));
-		$url = stripslashes(htmlspecialchars($v['url'], ENT_QUOTES));
+		if($v['type'] == 4)
+		{
+			$image = stripslashes(htmlspecialchars($v['image'], ENT_QUOTES));
+			$url = stripslashes(htmlspecialchars($v['url'], ENT_QUOTES));
+		}
 	}
-}
 
-if(!empty($image)) echo '<a id="fond" style=\'background: url("images/pub/'. $image .'") center top;\' href="'. $url .'" onclick="window.open(this.href); return false;"></a><a href="'. $url .'"><p style="height: 170px;"></p></a>';
-*/
-?>
-<!--
-<div id="fond_site_1">
-<div id="fond_site_2">
+	if(!empty($image)) echo '<a id="fond" style=\'background: url("images/pub/'. $image .'") center top;\' href="'. $url .'" onclick="window.open(this.href); return false;"></a><a href="'. $url .'"><p style="height: 170px;"></p></a>';
+	*/
+	?>
+	<!--
+	<div id="fond_site_1">
+	<div id="fond_site_2">
 
-<?php 
-/*
-	if(is_dir('install')) echo '<div><span class="error">'. $language['error_install_file'] .'</span></div>'; 
-	if(is_dir('admin')) echo '<div><span class="error">'. $language['error_admin_file'] .'</span></div>'; 
-	if(is_dir('cron')) echo '<div><span class="error">'. $language['error_cron_file'] .'</span></div>';
-*/
-?>
+	<?php 
+	/*
+		if(is_dir('install')) echo '<div><span class="error">'. $language['error_install_file'] .'</span></div>'; 
+		if(is_dir('admin')) echo '<div><span class="error">'. $language['error_admin_file'] .'</span></div>'; 
+		if(is_dir('cron')) echo '<div><span class="error">'. $language['error_cron_file'] .'</span></div>';
+	*/
+	?>
 
-<div id="haut_site">
+	<div id="haut_site">
 
-	<div id="haut_site_logo">
-		<p><a href="<?php echo URL; ?>"><img src="images/logo.png" alt="<?php if(!empty($title)) echo stripslashes(htmlspecialchars($title, ENT_QUOTES)); ?>" /></a></p>
-	</div>
-	
-	<div id="haut_site_pub">
-		<?php
-			/*
-			$image = '';
-			$url = '';
-			$script = '';
-			
-			foreach($cache_publicites as $v)
-			{
-				if($v['id_pub'] == 1)
+		<div id="haut_site_logo">
+			<p><a href="<?php echo URL; ?>"><img src="images/logo.png" alt="<?php if(!empty($title)) echo stripslashes(htmlspecialchars($title, ENT_QUOTES)); ?>" /></a></p>
+		</div>
+		
+		<div id="haut_site_pub">
+			<?php
+				/*
+				$image = '';
+				$url = '';
+				$script = '';
+				
+				foreach($cache_publicites as $v)
 				{
-					$image = stripslashes(htmlspecialchars($v['image'], ENT_QUOTES));
-					$url = stripslashes(htmlspecialchars($v['url'], ENT_QUOTES));
-					$script = $v['script'];
+					if($v['id_pub'] == 1)
+					{
+						$image = stripslashes(htmlspecialchars($v['image'], ENT_QUOTES));
+						$url = stripslashes(htmlspecialchars($v['url'], ENT_QUOTES));
+						$script = $v['script'];
+					}
 				}
-			}
-			
-			if (!empty($script))
-			echo $script;
-			
-			else echo '<p><a href="'. $url .'" onclick="window.open(this.href); return false;"><img src="images/pub/'. $image .'" alt="" /></a></p>';
-			*/
-		?>
+				
+				if (!empty($script))
+				echo $script;
+				
+				else echo '<p><a href="'. $url .'" onclick="window.open(this.href); return false;"><img src="images/pub/'. $image .'" alt="" /></a></p>';
+				*/
+			?>
+		</div>
+		
 	</div>
-	
-</div>
 
-<div id="barre_liens_fond">
+	<div id="barre_liens_fond">
 
-	<div id="barre_liens">
-		<ul class="ul_barre">
-			<li class="li_barre"><a href="<?php// echo URL; ?>"><?php// echo $language['lien_accueil']; ?></a></li>
-			<li class="li_barre"><strong><a href="ann_type.php?type=1"><?php echo $language['lien_offres']; ?></a></strong></li>
-			<li class="li_barre"><a href="ann_type.php?type=2"><?php// echo $language['lien_recherches']; ?></a></li>
-			<?php// if($param_gen['active_ech'] == 1) echo '<li class="li_barre"><a href="ann_type.php?type=3">'. $language['lien_echanges'] .'</a></li>'; ?>
-			<?php// if($param_gen['active_don'] == 1) echo '<li class="li_barre"><a href="ann_type.php?type=4">'. $language['lien_dons'] .'</a></li>'; ?>
-			<?php// if($param_gen['actif_acc'] > 1 && $param_gen['active_bout'] == 1) echo '<li class="li_barre"><a href="boutiques_search.php">'. $language['lien_boutiques'] .'</a></li>'; ?>
-		</ul>
+		<div id="barre_liens">
+			<ul class="ul_barre">
+				<li class="li_barre"><a href="<?php// echo URL; ?>"><?php// echo $language['lien_accueil']; ?></a></li>
+				<li class="li_barre"><strong><a href="ann_type.php?type=1"><?php echo $language['lien_offres']; ?></a></strong></li>
+				<li class="li_barre"><a href="ann_type.php?type=2"><?php// echo $language['lien_recherches']; ?></a></li>
+				<?php// if($param_gen['active_ech'] == 1) echo '<li class="li_barre"><a href="ann_type.php?type=3">'. $language['lien_echanges'] .'</a></li>'; ?>
+				<?php// if($param_gen['active_don'] == 1) echo '<li class="li_barre"><a href="ann_type.php?type=4">'. $language['lien_dons'] .'</a></li>'; ?>
+				<?php// if($param_gen['actif_acc'] > 1 && $param_gen['active_bout'] == 1) echo '<li class="li_barre"><a href="boutiques_search.php">'. $language['lien_boutiques'] .'</a></li>'; ?>
+			</ul>
+		</div>
+		
+		<div id="barre_liens_depot">
+			<a href="<?php// if($param_gen['actif_acc'] == 2 && !isset($_SESSION['connect'])) echo 'acc_info.php'; else echo 'deposer-une-annonce.htm'; ?>"><img src="images/bouton_depot.png" alt="" /></a>
+		</div>
+		
 	</div>
-	
-	<div id="barre_liens_depot">
-		<a href="<?php// if($param_gen['actif_acc'] == 2 && !isset($_SESSION['connect'])) echo 'acc_info.php'; else echo 'deposer-une-annonce.htm'; ?>"><img src="images/bouton_depot.png" alt="" /></a>
-	</div>
-	
-</div>
--->
+	-->
 <?php
 }
 
@@ -5735,88 +5735,184 @@ function htm_connexion($type, $e)
 	
 ?>
 
-<div id="bloc_center">
+<style type="text/css">
+form.searchFrm {display: none;}
+</style>
+<div id="global-div">
+	<div id="content">
+		<form action="#" method="post" class="formulaire">
+	    	<fieldset>
+	    		<?php
+				if(isset($e) && $e == 1)
+					echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error3'] .'</span></p>';
+				
+				if(isset($e) && $e == 2)
+					echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error4'] .'</span></p>';
+				
+				if(isset($e) && $e == 3)
+				{
+					if($type == 1)
+						echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error1'] .'</span></p>';
+					else echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error2'] .'</span></p>';
+				}
+				?>
 
-<div id="middle_bloc_center">
+	            <div>
+	                <label for="email"><?php echo $language['compte_con_email']; ?></label>	
+	                <input type="text" id="email" name="email" />
+	            </div>
+	            <div>
+	                <label for="passwrd"><?php echo $language['compte_con_pass']; ?></label>	
+	                <input type="password" id="passwrd" name="passwrd" />
+	            </div>
+	            <div class="btnCont">
+	                <input type="submit" value="Valider" />
 
-<form method="post" action="">
-
-	<div id="corps">
-
-		<?php
-		
-		if(isset($e) && $e == 1)
-		echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error3'] .'</span></p>';
-		
-		if(isset($e) && $e == 2)
-		echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error4'] .'</span></p>';
-		
-		if(isset($e) && $e == 3)
-		{
-			if($type == 1)
-			echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error1'] .'</span></p>';
-			
-			else echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error2'] .'</span></p>';
-		}
-		
-		?>
-		
-		<p class="form_left"><label for="email_con"><?php echo $language['compte_con_email']; ?> :</label></p>
-		
-		<p class="form_right_select">
-			<input type="text" id="email_con" class="av_input" name="email_con" value="<?php if (!empty($_POST['email_con'])) echo htmlspecialchars($_POST['email_con']); ?>" /></span>
-		</p>
-		
-		<p class="form_left"><label for="password"><?php echo $language['compte_con_pass']; ?> :</label></p>
-		
-		<p class="form_right_select">
-			<input type="password" id="password" class="av_input" name="password" value="<?php if (!empty($_POST['password'])) echo htmlspecialchars($_POST['password']); ?>" /></span>
-		</p>
-		
-		<p class="form_left"></p>
-		
-		<p class="form_right">
-			<input type="image" src="images/bouton_valider.png" value="" />
-		</p>
-		
-		<?php
-		if($param_gen['active_fb'] == '1')
-		{
-		?>
-		<p class="form_left"></p>
-		
-		<p class="form_right_select">
-			<a href="fb_connect.php?type=<?php echo $type; ?>"><img src="images/bt_facebook.png" alt="" /></a>
-		</p>
-		<?php
-		}
-		?>
-		
-		<p class="form_left"></p>
-		
-		<p class="form_right_select">
-			<a href="acc_pass.php" class="lien_info_ann2"><?php echo $language['page_pass_mod_oub']; ?></a>
-		</p>
-		
-		<p class="form_left"></p>
-		
-		<p class="form_right_select">
-			<?php
-			
-			if($type == 1)
-			echo '<a href="acc_crea.php?type=1" class="lien_info_ann2">'. $language['compte_con_not1'] .'</a>';
-			
-			else echo '<a href="acc_crea.php?type=2" class="lien_info_ann2">'. $language['compte_con_not2'] .'</a>';
-			
-			?>
-		</p>
-		
+	                <?php if($param_gen['active_fb'] == '1') : ?>
+	                <p><img src="img/btn-facebook-1.png" width="181" height="32" /></p>
+	                <?php endif;?>
+	                
+	                <p>
+	                    <a href="#">Mot de passe oublié ?</a><br />
+	                    <a href="#">Pas encore de compte ? Créez votre compte membre</a>
+	                </p>
+	            </div>
+	        </fieldset>
+	    </form>
+	    <form action="#" method="post" class="formulaire">
+	    	<fieldset>
+	            <div>
+	                <label for="inpCivil">Votre civilité :</label>
+	                <select id="inpCivil" name="inpCivil">
+	                    <option value="0">Choisir civilité</option>
+	                    <option value="1">Mme</option>
+	                    <option value="2">Mlle</option>
+	                    <option value="3">Mons</option>
+	                </select>
+	            </div>
+	            <div>    
+	                <label for="inpNom">Votre nom :</label>
+	                <input type="text" name="inpNom" id="inpNom" />
+	            </div> 
+	            <div>    
+	                <label for="inpPrenom">Votre prénom :</label>
+	                <input type="text" name="inpPrenom" id="inpPrenom" />
+	            </div>   
+	            <div>
+	                <label for="inpCivil">Votre région :</label>
+	                <select id="inpCivil" name="inpCivil">
+	                    <option value="0">Choisir région</option>
+	                    <option value="1">Option 1</option>
+	                    <option value="2">Option 2</option>
+	                    <option value="3">Option 3</option>
+	                </select>
+	            </div>    
+	            <div>    
+	                <label for="inpAdd">Votre adresse :</label>
+	                <input type="text" name="inpAdd" id="inpAdd" />
+	            </div>      
+	            <div>    
+	                <label for="inpCp">Votre code postal :</label>
+	                <input type="text" name="inpCp" id="inpCp" />
+	            </div>      
+	            <div>    
+	                <label for="inpVille">Votre ville :</label>
+	                <input type="text" name="inpVille" id="inpVille" />
+	            </div>    
+	            <div>    
+	                <label for="inpTel">Votre numéro de téléphone :</label>
+	                <input type="text" name="inpTel" id="inpTel" />
+	            </div>       	
+	            <div>
+	                <label for="email_1">Votre email :<em>*</em></label>	
+	                <input type="text" id="email_1" name="email_1" />
+	            </div>
+	            <div>
+	                <label for="pass_1">Mot de passe :</label>	
+	                <input type="text" id="pass_1" name="pass_1" />
+	            </div>
+	            <div>
+	                <label for="confPass">Comfirmation du mot de passe :</label>	
+	                <input type="text" id="confPass" name="confPass" />
+	            </div> 
+	            <div class="checkboxCont">
+	            	<input type="checkbox" name="cgu" />
+	            	<label>Je reconnais avoir lu et accepter les <a href="#">CGU</a></label>
+	            </div>
+	            <div class="btnCont">
+	                <input type="submit" value="Valider" />
+	            </div>  
+	        </fieldset> 
+	    </form>
 	</div>
-
-</form>
-
 </div>
+
+
+<div id="bloc_center" style="">
+	<div id="middle_bloc_center">
+		<form method="post" action="">
+			<div id="corps">
+				<?php
+				if(isset($e) && $e == 1)
+					echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error3'] .'</span></p>';
+				
+				if(isset($e) && $e == 2)
+					echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error4'] .'</span></p>';
+				
+				if(isset($e) && $e == 3)
+				{
+					if($type == 1)
+						echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error1'] .'</span></p>';
+					else echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error2'] .'</span></p>';
+				}
+				?>
+				
+				<p class="form_left"><label for="email_con"><?php echo $language['compte_con_email']; ?> :</label></p>
+				
+				<p class="form_right_select">
+					<input type="text" id="email_con" class="av_input" name="email_con" value="<?php if (!empty($_POST['email_con'])) echo htmlspecialchars($_POST['email_con']); ?>" /></span>
+				</p>
+				
+				<p class="form_left"><label for="password"><?php echo $language['compte_con_pass']; ?> :</label></p>
+				
+				<p class="form_right_select">
+					<input type="password" id="password" class="av_input" name="password" value="<?php if (!empty($_POST['password'])) echo htmlspecialchars($_POST['password']); ?>" /></span>
+				</p>
+				
+				<p class="form_left"></p>
+				<p class="form_right">
+					<input type="image" src="images/bouton_valider.png" value="" />
+				</p>
+				
+				<?php
+				if($param_gen['active_fb'] == '1')
+				{
+				?>
+					<p class="form_left"></p>
+					<p class="form_right_select">
+						<a href="fb_connect.php?type=<?php echo $type; ?>"><img src="images/bt_facebook.png" alt="" /></a>
+					</p>
+				<?php
+				}
+				?>
+				
+				<p class="form_left"></p>
+				<p class="form_right_select">
+					<a href="acc_pass.php" class="lien_info_ann2"><?php echo $language['page_pass_mod_oub']; ?></a>
+				</p>
+				<p class="form_left"></p>
+				<p class="form_right_select">
+					<?php
+						if($type == 1)
+							echo '<a href="acc_crea.php?type=1" class="lien_info_ann2">'. $language['compte_con_not1'] .'</a>';
+						else echo '<a href="acc_crea.php?type=2" class="lien_info_ann2">'. $language['compte_con_not2'] .'</a>';
+					?>
+				</p>
+			</div>
+		</form>
+	</div>
 </div>
+
 <?php
 }
 
