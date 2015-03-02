@@ -95,8 +95,8 @@ $info_page = ($type == 1) ? $language['infos_conn_acc1'] : $language['infos_conn
 ///////////////////////////////////
 //Inclusion des fonctions html
 //////////////////////////////////
-
-htm_header($title, $description, $words);
-display_index_text($info_page);
+htm_header_acc($title, $description, $words);
+// htm_header($title, $description, $words);
+// display_index_text($info_page);
 htm_connexion($type, $error);
 htm_footer();
