@@ -35,7 +35,7 @@ input, select, textarea{
 }
 
 /*** CSS Generique ***/
-#mast, #global{float:left; width:100%;}
+#mast, #global{float:left; width:100%; overflow:hidden;}
 #mast{background:#f7f7f7;}
 	#mast > div, #global > div{margin:auto; max-width:865px;}
 	#mast h1{float:left;}
@@ -132,10 +132,10 @@ input, select, textarea{
 	.btn{float:left; min-width:125px; text-align:center; background:#f6f6f6; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; border:1px solid #cccccc; color:#0054a6; font-size:0.75em; text-transform:uppercase; margin:0 10px 0 0; padding:0.3em 0.65em;}
 	.btn:hover, .btn.active{background-color:#0054a6; border-color:#0054a6; color:#FFFFFF;}
 	.mastList > span{float:left; width:82px; text-align:right; font-size:0.8em; padding:12px 0 0 0; color:#000000;}
-	.mastList > .listView, .mastList > .gridView{float:left; width:; margin:10px 0 0 10px; width:24px; height:22px; background:url(../img/icon-view-style.png) no-repeat right bottom; text-indent:-999px; padding:0; font-size:0;}
-	.mastList > span.listView{background-position:left top;}
-	.mastList > span.gridView{background-position:left bottom;}
-	.mastList > a.listView{background-position:right top;}
+	.btnView > .listView, .btnView > .gridView{float:left; width:; margin:10px 0 0 10px; width:24px; height:22px; background:url(../img/icon-view-style.png) no-repeat right bottom; text-indent:-999px; padding:0; font-size:0;}
+	.btnView > .listView{background-position:right top;}
+	.btnView > .listView.active{background-position:left top;}
+	.btnView > .gridView.active{background-position:left bottom;}
 	.mastList form{float:right; padding:12px 0 0 0;}
 		.mastList form a, .mastList form span{float:left; color:#0054a6; font-size:0.8em; padding:2px 0 0 0;}
 		.mastList form a{margin:0 10px 0 0;}

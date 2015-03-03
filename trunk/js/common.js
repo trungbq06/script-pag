@@ -161,9 +161,31 @@ jQuery(function(){
 		});// end elemExist
 	}
 
+	function toogleViewProduit(){
+		jQuery('.btnView').elemExist({
+			present : function(){
+				var btn = jQuery('.btnView > a');
+				var container = jQuery('#prodListe');
+				btn.on('click',function(e) {
+					if (jQuery(this).hasClass('gridView')) {
+						container.removeClass('listProduit').addClass('gridProduit');
+						jQuery('.btnView > a').removeClass('active');
+						jQuery(this).addClass('active');
+					}
+					else if(jQuery(this).hasClass('listView')) {
+						container.removeClass('gridProduit').addClass('listProduit');
+						jQuery('.btnView > a').removeClass('active');
+						jQuery(this).toggleClass('active');
+					}
+				});
+			}
+		});
+	}
+
 	// instance
 	defaultValFn();
 	inputSelectListFn();
 	gallerySlider();
+	toogleViewProduit();
 
 });// end doc ready
