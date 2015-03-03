@@ -38,7 +38,9 @@ function htm_header_acc($title, $description, $words)
 
 <div id="mast">
 	<div>
-		<h1><img src="img/logo.png" width="318" height="100" alt="MegaDeals - petites annonces faciles et gratuites" /></h1>
+		<h1>
+			<a href="<?php echo URL; ?>"><img src="img/logo.png" width="318" height="100" alt="MegaDeals - petites annonces faciles et gratuites" /></a>
+		</h1>
 		<div class="info">
 			<?php
 			if(empty($_SESSION['connect']))
@@ -1674,12 +1676,17 @@ function htm_categories()
 	global $language, $cache_categories;
 	
 ?>
+<style type="text/css">
+form.searchFrm, #foot-nav {display: none;}
+</style>
 
-<div id="bloc_categories_1">
-<div id="bloc_categories_2">
-
+<div id="global-div">
+<!-- <div id="bloc_categories_1">
+<div id="bloc_categories_2"> -->
+<div id="footer" class="footerInt">
+	<div class="sitemap">
+		<ul>
 <?php
-	
 	$a1 = 0;
 	$a2 = 1;
 	
@@ -1689,15 +1696,17 @@ function htm_categories()
 		$par_cat = (int) $row['par_cat'];
 		$nom_cat = stripslashes(htmlspecialchars($row['nom_cat'], ENT_QUOTES));
 		
-		if($a1%5 == 0) echo '<div style="clear: both;">';
+		// if($a1%5 == 0) echo '<div style="clear: both;">';
 		
 		if($par_cat == 0)
 		{
-			echo '<ul class="ul_categories">';
+			echo '<li>';
 			
-			if($a2 != 1 && $a2%5 == 0) echo '<li class="li_title_categories_2">'. $row['nom_cat'] .'</li>';
+			if($a2 != 1 && $a2%5 == 0) echo '<h2>'. $row['nom_cat'] .'</h2>';
 			
-			else echo '<li class="li_title_categories">'. $row['nom_cat'] .'</li>';
+			else echo '<h2>'. $row['nom_cat'] .'</h2>';
+
+			echo '<ul>';
 		}
 		
 		$sous_categories = $cache_categories;
@@ -1736,13 +1745,20 @@ function htm_categories()
 				echo '<li class="li_categories"><a href="Categorie-'. $id_sous_cat .'-'. $url_aff .'.htm">'. $nom_sous_cat .'</a></li>';
 			}
 		}
-		if($par_cat == 0) echo '</ul>';
-		if($a1%5 == 0) echo '</div>';
+		echo '</ul>';
+
+		if($par_cat == 0) echo '</li>';
+		// if($a1%5 == 0) echo '</div>';
 		$a1++; 
 		$a2++;
 	}
 ?>
-	
+		</ul>
+	</div>
+
+	<div class="blkCont">
+    	<p>Infos légales Qui sommes-nous ? Contact Leboncoin recrute ! Publicité Professionnels de l'immobilier Mobile Règles de diffusions Conditions Générales de Vente Ajouter à mes favoris Plan du site Vos cookies Partenaire : Prêt d'Union</p>
+    </div>
 </div>
 </div>
 
@@ -3851,9 +3867,9 @@ function display_text_no($texte)
 	global $language;
 	
 ?>
-<div id="bloc_center">
-<div id="middle_bloc_center">
-<div id="corps_listing">
+<!-- <div id="bloc_center">
+<div id="middle_bloc_center"> -->
+<div id="corps_listing" style="display: none;">
 
 	<p class="p_center">
 		<span class="txt_info"><?php echo $texte ?></span>
@@ -5759,11 +5775,11 @@ form.searchFrm {display: none;}
 
 	            <div>
 	                <label for="email"><?php echo $language['compte_con_email']; ?></label>	
-	                <input type="text" id="email" name="email" />
+	                <input type="text" id="email" name="email_con" value="<?php if (!empty($_POST['email_con'])) echo htmlspecialchars($_POST['email_con']); ?>"/>
 	            </div>
 	            <div>
 	                <label for="passwrd"><?php echo $language['compte_con_pass']; ?></label>	
-	                <input type="password" id="passwrd" name="passwrd" />
+	                <input type="password" id="passwrd" name="password" value="<?php if (!empty($_POST['password'])) echo htmlspecialchars($_POST['password']); ?>" />
 	            </div>
 	            <div class="btnCont">
 	                <input type="submit" value="Valider" />
@@ -5777,8 +5793,14 @@ form.searchFrm {display: none;}
 	                <?php endif;?>
 	                
 	                <p>
-	                    <a href="#">Mot de passe oublié ?</a><br />
-	                    <a href="#">Pas encore de compte ? Créez votre compte membre</a>
+	                    <a href="acc_pass.php" class="lien_info_ann2"><?php echo $language['page_pass_mod_oub']; ?></a><br />
+	                    
+						<?php
+							if($type == 1)
+								echo '<a href="acc_crea.php?type=1" class="lien_info_ann2">'. $language['compte_con_not1'] .'</a>';
+							else echo '<a href="acc_crea.php?type=2" class="lien_info_ann2">'. $language['compte_con_not2'] .'</a>';
+						?>
+					
 	                </p>
 	            </div>
 	        </fieldset>
@@ -5848,72 +5870,6 @@ form.searchFrm {display: none;}
 	            </div>  
 	        </fieldset> 
 	    </form>
-	</div>
-</div>
-
-
-<div id="bloc_center" style="">
-	<div id="middle_bloc_center">
-		<form method="post" action="">
-			<div id="corps">
-				<?php
-				if(isset($e) && $e == 1)
-					echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error3'] .'</span></p>';
-				
-				if(isset($e) && $e == 2)
-					echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error4'] .'</span></p>';
-				
-				if(isset($e) && $e == 3)
-				{
-					if($type == 1)
-						echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error1'] .'</span></p>';
-					else echo '<p class="form_left"></p><p class="form_right"><span class="error">'. $language['compte_con_error2'] .'</span></p>';
-				}
-				?>
-				
-				<p class="form_left"><label for="email_con"><?php echo $language['compte_con_email']; ?> :</label></p>
-				
-				<p class="form_right_select">
-					<input type="text" id="email_con" class="av_input" name="email_con" value="<?php if (!empty($_POST['email_con'])) echo htmlspecialchars($_POST['email_con']); ?>" /></span>
-				</p>
-				
-				<p class="form_left"><label for="password"><?php echo $language['compte_con_pass']; ?> :</label></p>
-				
-				<p class="form_right_select">
-					<input type="password" id="password" class="av_input" name="password" value="<?php if (!empty($_POST['password'])) echo htmlspecialchars($_POST['password']); ?>" /></span>
-				</p>
-				
-				<p class="form_left"></p>
-				<p class="form_right">
-					<input type="image" src="images/bouton_valider.png" value="" />
-				</p>
-				
-				<?php
-				if($param_gen['active_fb'] == '1')
-				{
-				?>
-					<p class="form_left"></p>
-					<p class="form_right_select">
-						<a href="fb_connect.php?type=<?php echo $type; ?>"><img src="images/bt_facebook.png" alt="" /></a>
-					</p>
-				<?php
-				}
-				?>
-				
-				<p class="form_left"></p>
-				<p class="form_right_select">
-					<a href="acc_pass.php" class="lien_info_ann2"><?php echo $language['page_pass_mod_oub']; ?></a>
-				</p>
-				<p class="form_left"></p>
-				<p class="form_right_select">
-					<?php
-						if($type == 1)
-							echo '<a href="acc_crea.php?type=1" class="lien_info_ann2">'. $language['compte_con_not1'] .'</a>';
-						else echo '<a href="acc_crea.php?type=2" class="lien_info_ann2">'. $language['compte_con_not2'] .'</a>';
-					?>
-				</p>
-			</div>
-		</form>
 	</div>
 </div>
 
@@ -7688,8 +7644,189 @@ function search_vitrines($keywords, $reg, $dep, $cat)
 	global $language, $cache_regions, $cache_departements, $cache_categories;
 ?>
 
-<div id="corps_recherche">
-<form method="get" action="boutiques_search.php">
+<div id="main-global">
+	<div id="content">
+		<form method="get" action="boutiques_search.php" class="frmProduit">
+	    	<fieldset>
+	        	<div class="searchFrm">
+	                <input type="text" id="inpSearch" value="Chercher" />
+	                <input type="text" id="inpPstCode" value="Toute la France" />
+	                <input type="submit" value="" />
+	                <select name="distance" id="distance">
+	                    <option value="0">0 km</option>
+	                    <option value="1">5 km</option>
+	                    <option value="2">10 km</option>
+	                    <option value="3">15 km</option>
+	                    <option value="4">20 km</option>
+	                </select>
+	            </div>
+	            <select name="optionMoto" id="optionMoto">
+	            	<option value="0">Moto</option>
+	                <option value="1">Option 1</option>
+	                <option value="2">Option 2</option>
+	            </select>
+	        </fieldset>
+	        <fieldset>
+	        	<input type="checkbox" />
+	        	<label>Recherche dans le titre uniquement</label>
+	            <input type="checkbox" />
+	        	<label>Only with picture</label>
+	        </fieldset>
+	        <fieldset class="fieldDets">
+	        	<div>
+	            	<strong>Prix</strong>
+	                <div class="selCont">
+	                	<select name="optionPrix">
+	                        <option value="0">Prix min.</option>
+	                        <option value="1">Prix min.</option>
+	                        <option value="2">Prix min.</option>
+	                    </select>
+	                    <span>et</span>
+	                    <select name="optionPrix_1">
+	                        <option value="0">Prix max.</option>
+	                        <option value="1">Prix max.</option>
+	                        <option value="2">Prix max.</option>
+	                    </select>
+	                </div>
+	                <strong>Année</strong>
+	                <div class="selCont">
+	                	<select name="optionAnnee">
+	                        <option value="0">Année min.</option>
+	                        <option value="1">Année min.</option>
+	                        <option value="2">Année min.</option>
+	                    </select>
+	                    <span>et</span>
+	                    <select name="optionAnnee_1">
+	                        <option value="0">Année max.</option>
+	                        <option value="1">Année max.</option>
+	                        <option value="2">Année max.</option>
+	                    </select>
+	                </div>
+	                <select name="optionModel" id="optionModel">
+	                    <option value="0">Model</option>
+	                    <option value="1">Option 1</option>
+	                    <option value="2">Option 2</option>
+	                </select>
+	            </div>
+	            <div>
+	            	<strong>Cylindrée</strong>
+	                <div class="selCont">
+	                	<select name="optionCyl">
+	                        <option value="0">Cylindrée min.</option>
+	                        <option value="1">Cylindrée min.</option>
+	                        <option value="2">Cylindrée min.</option>
+	                    </select>
+	                    <span>et</span>
+	                    <select name="optionCyl_1">
+	                        <option value="0">Cylindrée max.</option>
+	                        <option value="1">Cylindrée max.</option>
+	                        <option value="2">Cylindrée max.</option>
+	                    </select>
+	                </div>
+	                <strong>KM</strong>
+	                <div class="selCont">
+	                	<select name="optionKm">
+	                        <option value="0">KM min.</option>
+	                        <option value="1">KM min.</option>
+	                        <option value="2">KM min.</option>
+	                    </select>
+	                    <span>et</span>
+	                    <select name="optionKm_1">
+	                        <option value="0">KM max.</option>
+	                        <option value="1">KM max.</option>
+	                        <option value="2">KM max.</option>
+	                    </select>
+	                </div>
+	                <select name="optionTech" id="optionTech">
+	                    <option value="0">Technical condition</option>
+	                    <option value="1">Option 1</option>
+	                    <option value="2">Option 2</option>
+	                </select>
+	            </div>
+	        </fieldset>
+	        <fieldset class="lastField">
+	        	<input type="checkbox" />
+	        	<label>Annonces <em>Urgentes</em> uniquement</label>
+	        </fieldset>
+	    </form>
+	    <div class="breadCrumb">
+	    	<span>Vous êtes ici :</span>
+	        <ul>
+	        	<li><a href="#">Vehicules</a></li>
+	            <li>Motos</li>
+	        </ul>
+	    </div>
+	    <div class="mastList">
+	    	<a href="#" class="btn active">TOUTES<br />1 - 35 de 1 026 782</a>
+	        <a href="#" class="btn">Particuliers<br />1 026 782</a>
+	        <a href="#" class="btn">Professionnels<br />1 026 782</a>
+	        <span>View:</span>
+	        <div class="btnView">
+	        	<a href="javascript:;" class="listView active">List</a>
+	        	<a href="javascript:;" class="gridView">Grid</a>
+	        </div>
+	        <form action="#" method="post">
+	            <a href="#">Cacher les photos</a>
+	            <span>Trier </span>
+	        	<select>
+	            	<option value="0">Newest</option>
+	                <option value="1">Cheapest</option>
+	                <option value="2">Most expensive</option>
+	            </select>
+	        </form>
+	    </div>
+	    <ul id="prodListe" class="listProduit">
+	    	<li>
+	        	<span class="time">Aujourd’hui 18:40</span>
+	            <div class="imgCont">
+	            	<img src="img/illus-produit.jpg" width="155" height="113" />
+	            </div>
+	            <div class="infoPro">
+	            	<div class="iconCont">
+	                    <span>5</span>
+	                    <span>1</span>
+	                </div>
+	                <div class="infoDet">
+	                    <h2>Honda Shadow VT 750C2 Black Spiryt ''Phantom''</h2>
+	                    <h3>Motors</h3>
+	                    <span class="location locationActive">76140 Le Petit Quevilly</span>
+	                </div>
+	            </div>
+	            <div class="prixCont">
+	                <strong>2300€</strong>
+	                <a href="#" class="star">&nbsp;</a>
+	            </div>
+	    </ul>
+	    <div class="footList">
+	    	&nbsp;
+	    </div>
+	    <div class="pagination">
+	    	<span class="leftBtn">&lt;&lt; Page pr&eacute;c&eacute;dente </span>
+	        <ul>
+	        	<li><span>1</span></li>
+	            <li><a href="#">2</a></li>
+	            <li><a href="#">3</a></li>
+	            <li><a href="#">4</a></li>
+	            <li><a href="#">5</a></li>
+	            <li><a href="#">6</a></li>
+	            <li><a href="#">7</a></li>
+	            <li><a href="#">8</a></li>
+	            <li><a href="#">9</a></li>
+	            <li><a href="#">10</a></li>
+	            <li><a href="#">11</a></li>
+	            <li><a href="#">12</a></li>
+	            <li><a href="#">13</a></li>
+	            <li><a href="#" class="otherList">...</a></li>
+	            <li><a href="#">500</a></li>
+	        </ul>
+	        <span class="rightBtn"><a href="#">Page suivant &gt;&gt;</a></span>
+	    </div>
+	</div>	
+</div>
+
+
+<div id="corps_recherche" style="display: none;">
+<form method="get" action="boutiques_search.php" class="frmProduit">
 	
 	<div id="top_menu_recherche"></div>
 	
