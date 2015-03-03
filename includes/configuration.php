@@ -12,10 +12,10 @@
 //////////////////////////////////
 
 define("HOSTNAME", "localhost");
-define("DB_USERNAME", "root");	
+define("DB_USERNAME", "root");
 define("DB_PASSWORD", ""); 
-define("DB_NAME", "script-pag");
+define("DB_NAME", "script_pag");
 define("PREFIX", "PAG_");	
-define("URL", "http://localhost:85");
+define("URL", "http://localhost:9990");
 
 ##############################################################
