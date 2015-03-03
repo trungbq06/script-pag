@@ -28,9 +28,14 @@ function htm_header_acc($title, $description, $words)
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
+
+<script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+
 <link rel="stylesheet" type="text/css" href="style/screen.css" />
 <link rel="stylesheet" type="text/css" href="style/structure.css" />
 <link rel="stylesheet" type="text/css" href="style/style.css" />
+<link rel="stylesheet" href="style/galleriffic-5.css" type="text/css" />
 
 </head>
 
@@ -4074,6 +4079,168 @@ function display_annonce_create($membre)
 			</div>
 		</fieldset>
 	</form>
+	</div>
+	<script type="text/javascript">
+	$(function() {
+		$('.searchFrm').hide();
+	})
+	</script>
+	
+	<?php
+}
+
+/// ----- PAGE PRODUCT DETAIL ------ ///
+
+function display_product_detail($membre)
+{
+	global $language, $param_gen, $cache_options_visuelles, $cache_publicites, $cache_champs, $cache_categories;
+	
+	?>
+	
+	<div id="global-div">
+		<div class="breadCrumb">
+                 <ul>
+                 	<li><a href="#">Accueil</a></li>
+                    <li><a href="#">Maine-et-Loir</a></li>
+                    <li><a href="#">Motos</a></li>
+                    <li>Harley Davidson Electra Glide 1200 FLH Shovelhead </li>
+                 </ul>
+            </div>
+            <div id="content">
+            	<div class="product galleryCont">
+                	<div class="content">
+					<div id="caption" class="caption-container">
+						<div class="photo-index"></div>
+					</div>
+                        <div class="slideshow-container">
+                            <div id="loading" class="loader"></div>
+                            <div id="slideshow" class="slideshow"></div>
+                        </div>					
+                    </div>
+                    <div class="navigation-container">
+                        <div id="thumbs" class="navigation">
+                            <a class="pageLink prev" style="visibility: hidden;" href="#" title="Previous Page"></a>
+                            <ul class="thumbs noscript">
+                                <li>
+                                    <a class="thumb" name="leaf" href="img/illus-produit-wide.jpg" title="Title #0">
+                                        <img src="img/illus-produit-wide.jpg" alt="Title #0" />
+                                    </a>
+                                    <div class="caption">
+                                        <div class="image-title">Harley Davidson Electra Glide 1200 FLH Shovelhead</div>
+                                        <div class="image-desc">
+                                        	<span>76140 Le Petit Quevilly, <a href="#">Show on map</a></span>
+                                			<span><strong>Nickname</strong> Mise en ligne le 22 janvier à 10:38.</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="thumb" name="leaf" href="img/illus-produit-wide-1.jpg" title="Title #0">
+                                        <img src="img/illus-produit-wide-1.jpg" alt="Title #0" />
+                                    </a>
+                                    <div class="caption">
+                                        <div class="image-title">Harley Davidson Electra Glide 1200 FLH Shovelhead</div>
+                                        <div class="image-desc">
+                                        	<span>76140 Le Petit Quevilly, <a href="#">Show on map</a></span>
+                                			<span><strong>Nickname</strong> Mise en ligne le 22 janvier à 10:38.</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="thumb" name="leaf" href="img/illus-produit-wide-2.jpg" title="Title #0">
+                                        <img src="img/illus-produit-wide-2.jpg" alt="Title #0" />
+                                    </a>
+                                    <div class="caption">
+                                        <div class="image-title">Harley Davidson Electra Glide 1200 FLH Shovelhead</div>
+                                        <div class="image-desc">
+                                        	<span>76140 Le Petit Quevilly, <a href="#">Show on map</a></span>
+                                			<span><strong>Nickname</strong> Mise en ligne le 22 janvier à 10:38.</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="thumb" name="leaf" href="img/illus-produit-wide-3.jpg" title="Title #0">
+                                        <img src="img/illus-produit-wide-3.jpg" alt="Title #0" />
+                                    </a>
+                                    <div class="caption">
+                                        <div class="image-title">Harley Davidson Electra Glide 1200 FLH Shovelhead</div>
+                                        <div class="image-desc">
+                                        	<span>76140 Le Petit Quevilly, <a href="#">Show on map</a></span>
+                                			<span><strong>Nickname</strong> Mise en ligne le 22 janvier à 10:38.</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="thumb" name="leaf" href="img/illus-produit-wide-4.jpg" title="Title #0">
+                                        <img src="img/illus-produit-wide-4.jpg" alt="Title #0" />
+                                    </a>
+                                    <div class="caption">
+                                        <div class="image-title">Harley Davidson Electra Glide 1200 FLH Shovelhead</div>
+                                        <div class="image-desc">
+                                        	<span>76140 Le Petit Quevilly, <a href="#">Show on map</a></span>
+                                			<span><strong>Nickname</strong> Mise en ligne le 22 janvier à 10:38.</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a class="pageLink next" style="visibility: hidden;" href="#" title="Next Page"></a>
+                        </div>
+                        <div id="controls" class="controls"></div>
+                    </div>
+                    <div class="productDet">
+                    	<ul>
+                        	<li>
+                            	<ul>
+                                	<li><span><strong>Prix:</strong></span> <strong class="prix">8 400€</strong></li>
+                                    <li><span>Ville:</span> Angers</li>
+                                    <li><span>Code postal:</span> 49100</li>
+                                </ul>
+                            </li>
+                            <li>
+                            	<ul>
+                                	<li><span>Année-modèle :</span> 1978</li>
+                                    <li><span>Kilométrage :</span> 12 794 KM</li>
+                                    <li><span>Cylindrée :</span> 1 200 cm3</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    	<p><strong>Description</strong></p>
+                        <p>Harley Davidson Electra Glide 1200 équipé d'un carburateur mikuni,d'un radiateur d'huile et de pots drag-pipes.Très bonne mécanique,tout fonctionne.Je fournis le filtre à air qui n'est pas sur la photo.
+Plus de photos sur notre site JPL IMPORT.
+Livraison possible effectuée par nos soins.
+Portable: 06 86 77 72 46 </p>
+                    </div>
+                </div>
+                <div class="productContext">
+                	<a class="btn" href="#">Envoyer un email</a>
+                    <a class="btn btnNum" href="#">Voir le numero</a>
+                    <ul class="listAction">
+                    	<li class="liModif"><a href="#">Modifier</a></li>
+                        <li class="liDel"><a href="#">Supprimer</a></li>
+                        <li class="liMea"><a href="#">Mettre en avant</a></li>
+                        <li class="liEnTete"><a href="#">Remonter en tête de liste</a></li>
+                    </ul>
+                    <div class="formFoot">
+                    	<ul>
+                        	<li class="liSave"><a href="#">Sauvegarder l'annonce</a></li>
+                            <li class="liSig"><a href="#">Signaler un contenu abusif</a></li>
+                            <li class="liAmi"><a href="#">Conseiller l'annonce à un ami</a></li>
+                        </ul>
+                        <form action="#" method="post">
+                        	<div>
+                            	<label for="emailInp">Votre adresse email:</label>
+                                <input type="text" id="emailInp" name="emailInp" />
+                            </div>
+                            <div>
+                            	<label for="emailInpAmi">L'adresse email de votre ami(e):</label>
+                                <input type="text" id="emailInpAmi" name="emailInpAmi" />
+                            </div>
+                            <input type="submit" value="Envoyer" />
+                        </form>
+                    </div>
+                    <a href="http://facebook.com"><img src="img/btn-facebook.png" width="237" height="44" /></a>
+                </div>
+            </div>
+        </div>
 	</div>
 	<script type="text/javascript">
 	$(function() {
